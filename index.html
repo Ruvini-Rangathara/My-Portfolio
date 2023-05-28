@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ruvini Rangathara</title>
+
+    <link href="../assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/fontawesome/css/all.min.css" rel="stylesheet">
+    <!--    <link href="assets/normalize.css" rel="stylesheet">-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <style>
+        body{
+            background-color: #2a2727;
+        }
+        #n {
+
+            background-color:#2a2727;!important;
+            padding: 0;
+            position: fixed;
+            width: 60%;
+            z-index: 5;
+            /*box-shadow: 0px 2px 4px #2c3034;*/
+            border-radius: 100px 100px 100px 100px;
+            height: fit-content;
+            right: 0;
+            /*margin: auto;*/
+            margin-top: 1%;
+            margin-right: 30px;
+        }
+        #nav_my_name{
+            font-size: 10px;
+            margin-bottom: 0;
+            color: white;
+            margin-right: 80px;
+        }
+        #hamburger_id{
+            border: 0px;
+            /*background-color: blue;*/
+            width: 28px;
+            height: 25px;
+            padding: 0;
+        }
+        #hamburger_id:hover{
+            border: 0px solid #4f5050;!important;
+
+        }
+        #hamburger{
+            width: 20px;
+        }
+        #logo {
+            width: 35px;
+            height: 35px;
+            /*margin-right: 10px;*/
+        }
+        .container-fluid{
+            background-color: #4f5050;!important;
+            border-radius: 18px;
+            width: 100%;
+            height: 31px;
+            border: 1px solid #373b3e;
+            box-shadow: 2px 2px 5px 1px #373b3e;
+        }
+        p{
+            color: white;
+            text-align: center;
+        }
+        hr{
+            background-color: #FFA800;
+            width: 90%;
+            right: 0;
+            left: 0;
+            margin: auto;
+            border-width: 1px;
+            border-color: #FFA800;
+            border-style: solid;
+        }
+        .section_head{
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            color: #FFA800;
+            /*padding-left: 20px;*/
+            /*padding-right: 20px;*/
+            width: 200px;
+            font-size: 25px;
+            align-self:center;
+            opacity: 50%;
+            padding: 40px 20px 40px 0px;
+        }
+        #about_me_pic{
+            width: 200px;
+            height: fit-content;
+        }
+        #my_name{
+            font-size: 40px;
+            text-align: center;
+            color: white;
+        }
+        #about_me_para_div{
+            width: 800px;
+            padding: 40px 40px 0px 40px;
+        }
+        #about_me_sec{
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 50px 0px 0px;
+        }
+        #about_pic_div{
+            padding-bottom: 0; !important;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="n">
+            <div class="container-fluid">
+                    <img src="assert/image/logo_1.png" id="logo">
+                    <a href="#" class="navbar-brand">
+                        <p id="nav_my_name">Ruvini Rangathara</p>
+                    </a>
+                    <button type="button" class="navbar-toggler" id="hamburger_id" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span id="hamburger" class="navbar-toggler-icon"></span>
+                    </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="index.html" class="nav-item nav-link active">About Me</a>
+                        <a href="Manage_Orders.html" class="nav-item nav-link">Education</a>
+                        <a href="Manage_Items.html" class="nav-item nav-link">Skills</a>
+                        <a href="Manage_Customer.html" class="nav-item nav-link">Projects</a>
+                        <a href="Manage_Customer.html" class="nav-item nav-link">Gallery</a>
+                        <a href="Manage_Customer.html" class="nav-item nav-link">Contact Me</a>
+                        <!--          <a href="#" class="nav-item nav-link disabled" tabindex="-1">Reports</a>-->
+                    </div>
+                </div>
+            </div>
+        </nav>
+    <br><br>
+    <section id="about_me_sec">
+        <div class="section_head">About Me</div>
+        <div id="about_me_para_div" >
+
+            <h1 id="my_name">Ruvini Rangathara</h1>
+            <p>Full-Stack developer  Web Developer</p>
+            <br><br>
+            <p>Hello, I’m Ruvini Rangathara. I’m 23 years old
+                young and highly active enthusiast. I’m a developer
+                living in Panadura, Sri Lanka. I’m currently studying
+                in Institute Software Engineering (IJSE) and also I’m
+                working at IJSE as a trainee instructor.
+                My interests are in Back End Engineering.
+                I have a good knowledge of Java. I am a motivated,
+                organized and friendly individual with a passion for
+                coding and software development.</p>
+
+            <button>Download CV</button>
+
+
+        </div>
+        <div id="about_pic_div">
+            <img src="assert/image/myPic.png" id="about_me_pic">
+        </div>
+    </section>
+<hr>
+
+
+</body>
+</html>
