@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <style>
+
+    body{
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    #main_sec{
+      margin-top: 25%;
+    }
+
+    p{
+      text-align: center;
+      margin: 0;
+    }
+
+    #div_sec{
+      display: flex;
+
+    }
+
+    p{
+      color: red;
+      font-size: 18px;
+    }
+
+    hr{
+      margin: 5px;
+    }
+
+    div {
+      width: 50px;
+      height: 30px;
+      margin-left: 5px;
+    }
+
+    button{
+      width: 50px;
+      height: 20px;
+      margin: 8px;
+      font-size: 12px;
+      border: 1px solid white;
+      border-radius: 5px;
+      color: white;
+    }
+
+    #start{
+      background-color: red;
+
+    }
+    #stop{
+      background-color: grey;
+      color: white;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<section id="main_sec">
+
+  <p>JavaScript Knight Rider</p>
+  <hr>
+  <section id="div_sec">
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+  </section>
+  <hr>
+
+  <section>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </section>
+
+</section>
+
+
+<script>
+
+  let lights = $('.light');
+  let index=0;
+  let direction = 'Right';
+
+  let key = null;
+  var audio = new Audio();
+
+  audio.src="assert/audio/Knight Rider Sms ! Knight Rider ! Theme.mp3";
+  audio.loop=true;
+
+  function updateLight(){
+    $('.light').css({background:"white"});
+
+    if(index>0){
+      lights[index-1].style.background="pink";
+    }
+
+    lights[index].style.background="red";
+
+    if(index<6){
+      lights[index+1].style.background="pink";
+    }
+
+    if(index===6){
+      direction="Left";
+    }
+
+    if(index===0){
+      direction="Right";
+    }
+
+    direction==="Right" ? index++ : index--;
+
+  }
+
+
+
+  $('#start').on('click',()=>{
+    key=setInterval(updateLight,500);
+    audio.play();
+  });
+
+  $('#stop').on('click',()=>{
+    clearInterval(key);
+    audio.pause();
+  });
+
+
+</script>
+
+</body>
+</html>

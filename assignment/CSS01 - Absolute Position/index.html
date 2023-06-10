@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS01 - Ruvini Rangathara</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        .one{
+            background: red;
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .two{
+            background: green;
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .three{
+            background: yellow;
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .four{
+            background: deeppink;
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .quarter-circle-top-left{
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 0 0 100px 0;
+            -moz-border-radius: 0 0 100px 0;
+            -webkit-border-radius: 0 0 100px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .quarter-circle-top-right{
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 0 0 0 100px;
+            -moz-border-radius: 0 0 0 100px;
+            -webkit-border-radius: 0 0 0 100px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .quarter-circle-bottom-left{
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 0 100px 0 0;
+            -moz-border-radius: 0 100px 0 0;
+            -webkit-border-radius: 0 100px 0 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .quarter-circle-bottom-right{
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 100px 0 0 0;
+            -moz-border-radius: 100px 0 0 0;
+            -webkit-border-radius: 100px 0 0 0;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .quarter-circle-top-right-middle{
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 0 0 0 100px;
+            -moz-border-radius: 0 0 0 100px;
+            -webkit-border-radius: 0 0 0 100px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .quarter-circle-top-left-middle{
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 0 0 100px 0;
+            -moz-border-radius: 0 0 100px 0;
+            -webkit-border-radius: 0 0 100px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .quarter-circle-bottom-right-middle{
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 100px 0 0 0;
+            -moz-border-radius: 100px 0 0 0;
+            -webkit-border-radius: 100px 0 0 0;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .quarter-circle-bottom-left-middle{
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 0 100px 0 0;
+            -moz-border-radius: 0 100px 0 0;
+            -webkit-border-radius: 0 100px 0 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .quarter-square-bottom-left{
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 0 0 0 0;
+            -moz-border-radius: 0 0 0 0;
+            -webkit-border-radius: 0 0 0 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .quarter-square-bottom-right{
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 0 0 0 0;
+            -moz-border-radius: 0 0 0 0;
+            -webkit-border-radius: 0 0 0 0;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .quarter-square-top-left{
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 0 0 0 0;
+            -moz-border-radius: 0 0 0 0;
+            -webkit-border-radius: 0 0 0 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .quarter-square-top-right{
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 0 0 0 0;
+            -moz-border-radius: 0 0 0 0;
+            -webkit-border-radius: 0 0 0 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .red-quarter-circle-bottom-left{
+            width: 70px;
+            height: 70px;
+            background: red;
+            border-radius: 0 100px 0 0;
+            -moz-border-radius: 0 100px 0 0;
+            -webkit-border-radius: 0 100px 0 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .red-quarter-circle-bottom-right{
+            width: 70px;
+            height: 70px;
+            background: red;
+            border-radius: 100px 0 0 0;
+            -moz-border-radius: 100px 0 0 0;
+            -webkit-border-radius: 100px 0 0 0;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .red-quarter-circle-top-right{
+            width: 70px;
+            height: 70px;
+            background: red;
+            border-radius: 0 0 0 100px;
+            -moz-border-radius: 0 0 0 100px;
+            -webkit-border-radius: 0 0 0 100px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .red-quarter-circle-top-left{
+            width: 70px;
+            height: 70px;
+            background: red;
+            border-radius: 0 0 100px 0;
+            -moz-border-radius: 0 0 100px 0;
+            -webkit-border-radius: 0 0 100px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .top-left-circle{
+            width: 175px;
+            height: 175px;
+            background: white;
+            border-radius: 100px 100px 100px 100px;
+            -moz-border-radius: 100px 100px 100px 100px;
+            -webkit-border-radius: 100px 100px 100px 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .top-left-square{
+            width: 75px;
+            height: 75px;
+            background: red;
+            border-radius: 0 0 0 0;
+            -moz-border-radius: 0 0 0 0;
+            -webkit-border-radius: 0 0 0 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .top-right-circle{
+            width: 175px;
+            height: 175px;
+            background: white;
+            border-radius: 100px 100px 100px 100px;
+            -moz-border-radius: 100px 100px 100px 100px;
+            -webkit-border-radius: 100px 100px 100px 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .top-right-square{
+            width: 75px;
+            height: 75px;
+            background: red;
+            border-radius: 0 0 0 0;
+            -moz-border-radius: 0 0 0 0;
+            -webkit-border-radius: 0 0 0 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .bottom-left-circle{
+            width: 175px;
+            height: 175px;
+            background: white;
+            border-radius: 100px 100px 100px 100px;
+            -moz-border-radius: 100px 100px 100px 100px;
+            -webkit-border-radius: 100px 100px 100px 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .bottom-left-square{
+            width: 75px;
+            height: 75px;
+            background: red;
+            border-radius: 0 0 0 0;
+            -moz-border-radius: 0 0 0 0;
+            -webkit-border-radius: 0 0 0 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .bottom-right-circle{
+            width: 175px;
+            height: 175px;
+            background: white;
+            border-radius: 100px 100px 100px 100px;
+            -moz-border-radius: 100px 100px 100px 100px;
+            -webkit-border-radius: 100px 100px 100px 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .bottom-right-square{
+            width: 75px;
+            height: 75px;
+            background: red;
+            border-radius: 0 0 0 0;
+            -moz-border-radius: 0 0 0 0;
+            -webkit-border-radius: 0 0 0 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="one">
+        <div class="quarter-circle-top-left"></div>
+        <div class="quarter-circle-top-right-middle"></div>
+        <div class="quarter-square-bottom-right"></div>
+        <div class="red-quarter-circle-bottom-right"></div>
+        <div class="top-left-circle"></div>
+        <div class="top-left-square"></div>
+    </div>
+    <div class="two">
+        <div class="quarter-circle-top-right"></div>
+        <div class="quarter-circle-top-left-middle"></div>
+        <div class="quarter-square-bottom-left"></div>
+        <div class="red-quarter-circle-bottom-left"></div>
+        <div class="top-right-circle"></div>
+        <div class="top-right-square"></div>
+    </div>
+    <div class="three">
+        <div class="quarter-circle-bottom-left"></div>
+        <div class="quarter-circle-bottom-right-middle"></div>
+        <div class="quarter-square-top-right"></div>
+        <div class="red-quarter-circle-top-right"></div>
+        <div class="bottom-left-circle"></div>
+        <div class="bottom-left-square"></div>
+    </div>
+    <div class="four">
+        <div class="quarter-circle-bottom-right"></div>
+        <div class="quarter-circle-bottom-left-middle"></div>
+        <div class="quarter-square-top-left"></div>
+        <div class="red-quarter-circle-top-left"></div>
+        <div class="bottom-right-circle"></div>
+        <div class="bottom-right-square"></div>
+    </div>
+</body>
+</html>

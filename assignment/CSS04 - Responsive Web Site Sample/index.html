@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS04 - Ruvini Rangathara</title>
+    <link rel="stylesheet" href="assests/css/normalize.css">
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            width: 250px;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        body > header {
+            height: 90px;
+            margin: 0;
+        }
+
+        body > header > ul {
+            position: absolute;;
+            list-style: none;
+            padding: 0;
+            display: block;
+            top: 30px;
+            right: 20px;
+        }
+
+        body > header > ul > li {
+            display: inline;
+            padding: 15px;
+            font-size: 20px;
+            font-family: AlHor;
+        }
+
+        body > aside {
+            width: 300px;
+            background: purple;
+            position: absolute;
+            top: 90px;
+            left: 0;
+            bottom: 0;
+        }
+
+        body > aside > ul {
+            position: relative;
+            list-style: none;
+            margin: 0;
+            padding-left: 20px;
+            padding-top: 30px;
+            color: white;
+        }
+
+        body > aside > ul > li {
+            display: block;
+            padding: 10px;
+            font-size: 20px;
+            font-family: AlHor;
+        }
+
+        body > div {
+            position: relative;
+            left: 300px;
+            right: 0;
+            bottom: 100px;
+            width: calc(100% - 305px);
+            line-height: 1.4;
+        }
+
+        body > div > section {
+            position: relative;
+            left: 5px;
+            top: 40px;
+        }
+
+        body > div > section > img {
+            border: 1px solid green;
+            width: calc(100% / 3);
+
+        }
+
+        .image {
+            display: flex;
+        }
+
+        body > div > p {
+            position: relative;
+            margin-left: 10px;
+            margin-top: 10px;
+            top: 40px;
+        }
+
+        footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 40px;
+            width: 100%;
+            background-color: rgb(70, 66, 66);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img class="logo" src="assests/ijse.png" alt="ijse logo">
+    <ul>
+        <li>Home</li>
+        <li>Services</li>
+        <li>Contacts</li>
+        <li>About Us</li>
+    </ul>
+</header>
+<aside>
+    <ul>
+        <li>Home</li>
+        <li>Services</li>
+        <li>Contacts</li>
+        <li>About Us</li>
+    </ul>
+</aside>
+<div>
+    <section class="image">
+        <img src="assests/monkey.gif" alt="monkey gif">
+        <img src="assests/monkey.gif" alt="monkey gif">
+        <img src="assests/monkey.gif" alt="monkey gif">
+    </section>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ipsam labore nemo quasi. Dicta excepturi
+        fugit, illo in incidunt ipsum, nam nisi perspiciatis praesentium quasi quibusdam reiciendis rem vel vitae.</p>
+    <p>Accusantium aspernatur aut blanditiis debitis dolores ducimus eaque eligendi explicabo in ipsum laboriosam
+        numquam optio pariatur, perspiciatis placeat quidem quis quisquam, quod rem similique tempora tempore totam vero
+        voluptas voluptatem.</p>
+    <p>Ab adipisci, alias aut commodi consequuntur deleniti distinctio dolorem esse et ex excepturi hic in ipsum labore
+        laboriosam magni minima, minus neque nesciunt non odit officia, omnis quasi vero voluptates.</p>
+    <p>Exercitationem, magnam tempora? A animi, aperiam asperiores delectus, ipsa iusto laudantium modi mollitia nihil
+        non porro qui ratione reiciendis rem sed ullam veniam! Alias, architecto eligendi inventore nesciunt sapiente
+        tempore?</p>
+    <p>Ad amet asperiores beatae ea, eius eligendi et harum illo impedit in inventore ipsa laborum modi molestias nam
+        natus nemo placeat praesentium quas quia quis sed tenetur vel? Maxime, tempora!</p>
+    <p>Accusamus ad aspernatur aut autem commodi cupiditate dolore doloremque ex explicabo fugiat hic id ipsum
+        laboriosam laborum neque nihil, nisi non odit pariatur placeat quaerat quam repudiandae sequi vitae
+        voluptas?</p>
+    <p>Accusantium fuga illum in minima nobis omnis quaerat. Adipisci aperiam aspernatur cumque delectus dolore
+        doloribus, harum illo in inventore ipsum iste maxime molestiae nemo officiis porro praesentium reprehenderit
+        soluta tenetur?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eligendi in nesciunt nihil perspiciatis quo
+        reprehenderit similique soluta totam unde. Dolorum et nihil obcaecati tempore ut velit voluptatem voluptatibus
+        voluptatum.</p>
+    <p>Assumenda cumque delectus facilis, fuga id, minus molestiae nostrum odit perferendis praesentium provident quae
+        quia ratione tempore tenetur vitae voluptatibus! Alias assumenda cumque ducimus explicabo, id perferendis sed
+        sunt unde!</p>
+    <p>A architecto at beatae consequatur corporis earum est, id illo incidunt, labore nobis odio officia provident
+        repudiandae sit suscipit voluptate! Consequatur, distinctio dolorum earum error esse iure nisi tempore
+        voluptas.</p>
+    <p>Amet animi asperiores deserunt doloribus dolorum error, est, expedita fugit harum, impedit inventore laudantium
+        molestiae nisi numquam odit porro possimus recusandae sapiente sed sunt unde vel vitae voluptate voluptates
+        voluptatibus!</p>
+    <p>Doloremque esse ex laboriosam nihil tenetur. Blanditiis corporis excepturi in ipsa, provident repellendus! A
+        nesciunt, quaerat. Accusantium aliquam amet ducimus, facere id, magnam minima, quis repellendus tempora
+        temporibus ullam unde.</p>
+    <p>Accusamus aperiam odio quaerat quo sit vel. Accusantium aut, debitis doloremque doloribus eaque fugiat hic illum
+        impedit libero magni minima minus officia, qui quidem recusandae reprehenderit sunt temporibus voluptates
+        voluptatum.</p>
+</div>
+<footer>Developed By IJSE</footer>
+</body>
+</html>

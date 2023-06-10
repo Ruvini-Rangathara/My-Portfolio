@@ -11,63 +11,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <link href="../assert/external_stylesheet/nav_sec.css" rel="stylesheet">
+    <link href="../assert/external_stylesheet/project_sec.css" rel="stylesheet">
+    <link href="../assert/external_stylesheet/certificate_card.css" rel="stylesheet">
+    <link href="../assert/external_stylesheet/education_card.css" rel="stylesheet">
+    <link href="../assert/external_stylesheet/experience_sec.css" rel="stylesheet">
+    <link href="../assert/external_stylesheet/gallery_sec.css" rel="stylesheet">
+
 
     <style>
         body{
             background-color: #2a2727;
-        }
-        #n {
-
-            background-color:#2a2727;!important;
-            padding: 0;
-            position: fixed;
-            width: 60%;
-            z-index: 5;
-            /*box-shadow: 0px 2px 4px #2c3034;*/
-            border-radius: 100px 100px 100px 100px;
-            height: fit-content;
-            right: 0;
-            /*margin: auto;*/
-            margin-top: 1%;
-            margin-right: 30px;
-        }
-        #nav_my_name{
-            font-size: 10px;
-            margin-bottom: 0;
-            color: white;
-            margin-right: 80px;
-        }
-        #hamburger_id{
-            border: 0px;
-            /*background-color: blue;*/
-            width: 28px;
-            height: 25px;
             padding: 0;
         }
-        #hamburger_id:hover{
-            border: 0px solid #4f5050;!important;
 
-        }
-        #hamburger{
-            width: 20px;
-        }
-        #logo {
-            width: 35px;
-            height: 35px;
-            /*margin-right: 10px;*/
-        }
-        .container-fluid{
-            background-color: #4f5050;!important;
-            border-radius: 18px;
-            width: 100%;
-            height: 31px;
-            border: 1px solid #373b3e;
-            box-shadow: 2px 2px 5px 1px #373b3e;
-        }
-        p{
-            color: white;
-            text-align: center;
-        }
         hr{
             background-color: #FFA800;
             width: 90%;
@@ -78,39 +35,32 @@
             border-color: #FFA800;
             border-style: solid;
         }
-        .section_head{
-            display: flex;
-            justify-content: center;
-            align-items: start;
-            color: #FFA800;
-            /*padding-left: 20px;*/
-            /*padding-right: 20px;*/
-            width: 200px;
-            font-size: 25px;
-            align-self:center;
-            opacity: 50%;
-            padding: 40px 20px 40px 0px;
-        }
-        #about_me_pic{
-            width: 200px;
-            height: fit-content;
-        }
-        #my_name{
-            font-size: 40px;
-            text-align: center;
+
+        #about_me_sec p {
             color: white;
+
         }
-        #about_me_para_div{
-            width: 800px;
-            padding: 40px 40px 0px 40px;
-        }
-        #about_me_sec{
+
+
+
+        .assignment_main{
             display: flex;
             justify-content: space-between;
-            padding: 30px 50px 0px 0px;
         }
-        #about_pic_div{
-            padding-bottom: 0; !important;
+
+        .assignment_div{
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            color: black;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a{
+            color: black;
         }
 
 
@@ -123,18 +73,18 @@
                     <a href="#" class="navbar-brand">
                         <p id="nav_my_name">Ruvini Rangathara</p>
                     </a>
-                    <button type="button" class="navbar-toggler" id="hamburger_id" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <button type="button" class="navbar-toggler" id="hamburger_id" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" onclick="changeVisibility()" >
                         <span id="hamburger" class="navbar-toggler-icon"></span>
                     </button>
 
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav">
-                        <a href="index.html" class="nav-item nav-link active">About Me</a>
-                        <a href="Manage_Orders.html" class="nav-item nav-link">Education</a>
-                        <a href="Manage_Items.html" class="nav-item nav-link">Skills</a>
-                        <a href="Manage_Customer.html" class="nav-item nav-link">Projects</a>
-                        <a href="Manage_Customer.html" class="nav-item nav-link">Gallery</a>
-                        <a href="Manage_Customer.html" class="nav-item nav-link">Contact Me</a>
+                    <div class="navbar-nav" id="nav-bar">
+                        <a href="index.html" class="nav-item nav-link active" id="about-me-link">&nbsp;About Me</a>
+                        <a href="Manage_Orders.html" class="nav-item nav-link" id="education-link">&nbsp;Education</a>
+                        <a href="Manage_Items.html" class="nav-item nav-link" id="skills-link">&nbsp;Skills</a>
+                        <a href="Manage_Customer.html" class="nav-item nav-link" id="projects-link">&nbsp;Projects</a>
+                        <a href="Manage_Customer.html" class="nav-item nav-link" id="gallery-link">&nbsp;Gallery</a>
+                        <a href="Manage_Customer.html" class="nav-item nav-link" id="contact-me-link">&nbsp;Contact Me</a>
                         <!--          <a href="#" class="nav-item nav-link disabled" tabindex="-1">Reports</a>-->
                     </div>
                 </div>
@@ -168,6 +118,565 @@
     </section>
 <hr>
 
+    <section id="id-education">
+        <div class="section_head" style="padding-top: 0">Education</div>
+
+        <h3>Life Long Learning</h3>
+        <br>
+        <ol>
+            <li style="--accent-color:#989898">
+                <div class="icon"><img src="assert/image/icons8-graduation-cap-50.png"></div>
+                <div class="title">IJSE</div>
+                <div class="descr">BSc (Hons) In Computer Science
+                    Institute Of Software Engineering
+                    Panadura.</div>
+            </li>
+            <li style="--accent-color:#808080">
+                <div class="icon"><img src="assert/image/icons8-graduation-cap-50.png"></div>
+                <div class="title">UOJ</div>
+                <div class="descr"><p>University Of Sri Jayewardenepura</p>2022 - Physical Sciences Selected.</div>
+            </li>
+            <li style="--accent-color:#757575">
+                <div class="icon"><img src="assert/image/icons8-graduation-cap-50.png"></div>
+                <div class="title">Advanced Level</div>
+                <div class="descr">2019 O/L - Maths Stream <p>Taxila Central College Horana.</p> </div>
+            </li>
+            <li style="--accent-color:#555555">
+                <div class="icon"><img src="assert/image/icons8-graduation-cap-50.png"></div>
+                <div class="title">Ordinary Level</div>
+                <div class="descr">2016 O/L - Sinhala Medium <p>Agamethi Balika Maha Vidyalaya
+                    Panadura.</p></div>
+            </li>
+            <li style="--accent-color:#353839">
+                <div class="icon"><img src="assert/image/icons8-graduation-cap-50.png"></div>
+                <div class="title">Primary Education</div>
+                <div class="descr">Grade  5 scholarship - K / Mahavila
+                    Vidyalaya Panadura.</div>
+            </li>
+        </ol>
+
+        <br>
+
+    </section>
+
+<hr>
+
+    <section>
+        <div class="section_head" id="exper_skill_id" style="padding-top: 0">Experiences & Skills</div>
+
+        <section id="cd-timeline" class="cd-container">
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-picture">
+                </div>
+
+                <div class="cd-timeline-content">
+                    <h2>Trainee Instructor</h2>
+                    <div class="timeline-content-info">
+          <span class="timeline-content-info-title">
+            <i class="fa fa-certificate" aria-hidden="true"></i>
+            Developer
+          </span>
+                        <span class="timeline-content-info-date">
+            <i class="fa fa-calendar-o" aria-hidden="true"></i>
+            January 2023 - Present
+          </span>
+                    </div>
+                    <p>At Institute of software Engineering - (IJSE)</p>
+                    <!--            <ul class="content-skills">-->
+                    <!--                <li>HTML5</li>-->
+                    <!--                <li>CSS3</li>-->
+                    <!--                <li>JavaScript</li>-->
+                    <!--                <li>jQuery</li>-->
+                    <!--                <li>Wordpress</li>-->
+                    <!--            </ul>-->
+                </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-movie">
+                </div> <!-- cd-timeline-img -->
+
+                <div class="cd-timeline-content">
+                    <h2>Student at IJSE</h2>
+
+                    <div class="timeline-content-info">
+          <span class="timeline-content-info-title">
+            <i class="fa fa-certificate" aria-hidden="true"></i>
+            Developer
+          </span>
+                        <span class="timeline-content-info-date">
+            <i class="fa fa-calendar-o" aria-hidden="true"></i>
+            January 2022 - Present
+          </span>
+                    </div>
+
+                    <p>At Institute of software Engineering - (IJSE)</p>
+                    <span class="cd-date"></span>
+<!--                    <span class="cd-date">Jan 18</span>-->
+                </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-picture">
+                </div> <!-- cd-timeline-img -->
+
+                <div class="cd-timeline-content">
+                    <h2>Member of student committee</h2>
+
+                    <div class="timeline-content-info">
+          <span class="timeline-content-info-title">
+            <i class="fa fa-certificate" aria-hidden="true"></i>
+            Committee Member
+          </span>
+                        <span class="timeline-content-info-date">
+            <i class="fa fa-calendar-o" aria-hidden="true"></i>
+            December 2022 - Present
+          </span>
+                    </div>
+
+
+
+                    <p>At Institute of software Engineering - (IJSE)</p>
+                    <span class="cd-date"></span>
+                </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-location">
+                </div> <!-- cd-timeline-img -->
+
+                <div class="cd-timeline-content">
+                    <h2>Event Planing</h2>
+                    <p>Techie Blaster Cricket Tournament - December 2022 (IJSE)
+                        <br>Innovesta'23 - (IJSE)
+                    </p>
+<!--                    <span class="cd-date">Feb 14</span>-->
+                </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
+
+<!--            <div class="cd-timeline-block">-->
+<!--                <div class="cd-timeline-img cd-location">-->
+<!--                </div>-->
+
+<!--                <div class="cd-timeline-content">-->
+<!--                    <h2>Title of section 5</h2>-->
+<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+<!--                        Iusto, optio, dolorum provident rerum.</p>-->
+<!--                    <span class="cd-date">Feb 18</span>-->
+<!--                </div> &lt;!&ndash; cd-timeline-content &ndash;&gt;-->
+<!--            </div> &lt;!&ndash; cd-timeline-block &ndash;&gt;-->
+
+<!--            <div class="cd-timeline-block">-->
+<!--                <div class="cd-timeline-img cd-movie">-->
+<!--                </div> &lt;!&ndash; cd-timeline-img &ndash;&gt;-->
+
+<!--                <div class="cd-timeline-content">-->
+<!--                    <h2>Final Section</h2>-->
+<!--                    <p>This is the content of the last section</p>-->
+<!--                    <span class="cd-date">Feb 26</span>-->
+<!--                </div> &lt;!&ndash; cd-timeline-content &ndash;&gt;-->
+<!--            </div> &lt;!&ndash; cd-timeline-block &ndash;&gt;-->
+        </section> <!-- cd-timeline -->
+
+
+
+
+
+
+
+
+
+
+    </section>
+<br>
+
+<!--    certificate section done-->
+    <section>
+        <div class="section_head" style="padding-top: 0">Certificates</div>
+
+        <div class="wrapper">
+
+            <div class="header">
+                <h1 class="header__title">Certifications</h1>
+                <h2 class="header__subtitle">Unlocking Achievements & Professional Growth</h2>
+            </div>
+
+            <div class="cards">
+
+                <div class=" card [ is-collapsed ] ">
+                    <div class="card__inner [ js-expander ]">
+                        <span>Successfully completed the course by
+                            demonstrating theoretical and practical
+                            understanding of Java  -  Sololearn</span>
+                        <i class="fa fa-folder-o"></i>
+                    </div>
+                    <div class="card__expander">
+                        <i class="fa fa-close [ js-collapser ]"></i>
+                        <img src="assert/image/sololearn_java.png" class="expander_img">
+                    </div>
+                </div>
+
+                <div class=" card [ is-collapsed ] ">
+                    <div class="card__inner [ js-expander ]">
+                        <span>Successfully completed the course by
+                            demonstrating theoretical and practical
+                            understanding of SQL  -  Sololearn </span>
+                        <i class="fa fa-folder-o"></i>
+                    </div>
+                    <div class="card__expander">
+                        <i class="fa fa-close [ js-collapser ]"></i>
+                        <img src="assert/image/sololearn_sql.png" class="expander_img">
+                    </div>
+                </div>
+
+                <div class=" card [ is-collapsed ] ">
+                    <div class="card__inner [ js-expander ]">
+                        <span>Successfully completed the course by
+                            demonstrating theoretical and practical
+                            understanding of Introduction To HTML  -  Sololearn </span>
+                        <i class="fa fa-folder-o"></i>
+                    </div>
+                    <div class="card__expander">
+                        <i class="fa fa-close [ js-collapser ]"></i>
+                        <img src="assert/image/sololearn_introduction_to_html.png" class="expander_img">
+                    </div>
+                </div>
+
+                <div class=" card [ is-collapsed ] ">
+                    <div class="card__inner [ js-expander ]">
+                        <span>Successfully completed the course by
+                            demonstrating theoretical and practical
+                            understanding of Introduction To CSS  -  Sololearn</span>
+                        <i class="fa fa-folder-o"></i>
+                    </div>
+                    <div class="card__expander">
+                        <i class="fa fa-close [ js-collapser ]"></i>
+                        <img src="assert/image/sololearn_introduction_to_css.png" class="expander_img">
+                    </div>
+                </div>
+
+                <div class=" card [ is-collapsed ] ">
+                    <div class="card__inner [ js-expander ]">
+                        <span>Successfully completed the course by
+                            demonstrating theoretical and practical
+                            understanding of Introduction To JavaScript  -  Sololearn</span>
+                        <i class="fa fa-folder-o"></i>
+                    </div>
+                    <div class="card__expander">
+                        <i class="fa fa-close [ js-collapser ]"></i>
+                        <img src="assert/image/sololearn_introduction_to_js.png" class="expander_img">
+                    </div>
+                </div>
+
+                <div class=" card [ is-collapsed ] ">
+                    <div class="card__inner [ js-expander ]">
+                        <span>Successfully completed the course by
+                            demonstrating theoretical and practical
+                            understanding of Web Development Fundamental  -  Sololearn</span>
+                        <i class="fa fa-folder-o"></i>
+                    </div>
+                    <div class="card__expander">
+                        <i class="fa fa-close [ js-collapser ]"></i>
+                        <img src="assert/image/sololearn_web_development_fundamental.png" class="expander_img">
+                    </div>
+                </div>
+
+                <div class=" card [ is-collapsed ] ">
+                    <div class="card__inner [ js-expander ]">
+                        <span>Successfully completed the course by
+                            demonstrating theoretical and practical
+                            understanding of Java Intermediate -  Sololearn</span>
+                        <i class="fa fa-folder-o"></i>
+                    </div>
+                    <div class="card__expander">
+                        <i class="fa fa-close [ js-collapser ]"></i>
+                        <img src="assert/image/sololearn_java_intermediate.png" class="expander_img">
+                    </div>
+                </div>
+
+                <div class=" card [ is-collapsed ] ">
+                    <div class="card__inner [ js-expander ]">
+                        <span>Successfully completed the course by
+                            demonstrating theoretical and practical
+                            understanding of SQL Intermediate  -  Sololearn</span>
+                        <i class="fa fa-folder-o"></i>
+                    </div>
+                    <div class="card__expander">
+                        <i class="fa fa-close [ js-collapser ]"></i>
+                        <img src="assert/image/sololearn_sql_intermediate.png" class="expander_img">
+                    </div>
+                </div>
+
+                <div class=" card [ is-collapsed ] ">
+                    <div class="card__inner [ js-expander ]">
+                        <span>Card</span>
+                        <i class="fa fa-folder-o"></i>
+                    </div>
+                    <div class="card__expander">
+                        <i class="fa fa-close [ js-collapser ]"></i>
+                        Expander
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+<hr>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <hr>
+
+<!--    project section done-->
+    <section>
+        <div class="section_head" style="padding-top: 0">Projects</div>
+        <br>
+        <section id=timeline>
+            <!--    <h1>A Flexbox Timeline</h1>-->
+            <!--    <p class="leader">All cards must be the same height and width for space calculations on large screens.</p>-->
+            <div class="demo-card-wrapper">
+                <div class="demo-card demo-card--step1">
+                    <div class="head">
+                        <div class="number-box">
+                            <span>01</span>
+                        </div>
+                        <h2><span class="small">Stand Alone Application</span> Room Reservation System</h2>
+                    </div>
+                    <div class="body">
+                        <p>
+                        <p>Room Reservation System Of Blue Ocean Hotel.</p>
+                        1st Semester Software Engineering module final Project implemented without Java Database Connectivity.
+                        <p>( Institute Of Software Engineering - IJSE )</p></p>
+                        <p>GitHub Link : <a href="https://github.com/Ruvini-Rangathara/Hotel-Room-Reservation-Management-System.git">See here</a></p>
+                        <img src="assert/image/blue-ocean-project.png" alt="Graphic">
+                    </div>
+                </div>
+
+                <div class="demo-card demo-card--step2">
+                    <div class="head">
+                        <div class="number-box">
+                            <span>02</span>
+                        </div>
+                        <h2><span class="small">Stand Alone Application</span> Tuition Management System</h2>
+                    </div>
+                    <div class="body">
+                        <p>Tuition Management System Of
+                            Vidathya Higher Education Centre
+                        <p>
+                            1st Semester Final Project implemented using MVC Architecture and Java Database Connectivity.
+                        </p>
+<!--                        <p>-->
+<!--                            ( Institute Of Software Engineering - IJSE )-->
+<!--                        </p>-->
+                        </p>
+                        <p>GitHub Link : <a href="https://github.com/Ruvini-Rangathara/Tuition-Class-Management-System.git">See here</a>
+                         <br>
+                            UI Designs : <a href="https://drive.google.com/drive/folders/1zv7gs3sz6oz1NNmWf7Mc6dlgOBhDbNBP?usp=drive_link">See here</a></p>
+                        <img src="assert/image/tcms2.png" alt="Graphic">
+                    </div>
+                </div>
+
+                <div class="demo-card demo-card--step3">
+                    <div class="head">
+                        <div class="number-box">
+                            <span>03</span>
+                        </div>
+                        <h2><span class="small">Stand Alone Application</span>  Tuition Management System</h2>
+                    </div>
+                    <div class="body">
+                        <p>Tuition Management System Of
+                            Vidathya Higher Education Centre
+                        <p>
+                            1st Semester Final Project implemented using Layered Architecture and Java Database Connectivity.
+                        </p>
+                        <p>
+                            ( Institute Of Software Engineering - IJSE )
+                        </p>
+
+                        </p>
+                        <p>GitHub Link : <a href="https://github.com/Ruvini-Rangathara/1st-Layered-Project.git">See here</a></p>
+                        <img src="assert/image/tcms1.png" alt="Graphic">
+                    </div>
+                </div>
+
+                <div class="demo-card demo-card--step4">
+                    <div class="head">
+                        <div class="number-box">
+                            <span>04</span>
+                        </div>
+                        <h2><span class="small">Subtitle</span> Consistency</h2>
+                    </div>
+                    <div class="body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
+                        <img src="http://placehold.it/1000x500" alt="Graphic">
+                    </div>
+                </div>
+
+                <div class="demo-card demo-card--step5">
+                    <div class="head">
+                        <div class="number-box">
+                            <span>05</span>
+                        </div>
+                        <h2><span class="small">Subtitle</span> Conversion</h2>
+                    </div>
+                    <div class="body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
+                        <img src="http://placehold.it/1000x500" alt="Graphic">
+                    </div>
+                </div>
+
+                <div class="demo-card demo-card--step6">
+                    <div class="head">
+                        <div class="number-box">
+                            <span>06</span>
+                        </div>
+                        <h2><span class="small">Subtitle</span> Conversion</h2>
+                    </div>
+                    <div class="body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
+                        <img src="http://placehold.it/1000x500" alt="Graphic">
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </section>
+
+    </section>
+
+    <section>
+
+        <div class="section_head" style="padding-top: 0">Assignments</div>
+
+
+        <div class="assignment_main">
+            <div class="assignment_div"><a href="assignment/CSS01 - Absolute Position/index.html" >Assignment 01</a></div>
+            <div class="assignment_div"><a href="assignment/CSS02 - Fixed Circles/index.html" >Assignment 02</a></div>
+            <div class="assignment_div"><a href="assignment/CSS03 - Sticky Cards/index.html" >Assignment 03</a></div>
+            <div class="assignment_div"><a href="assignment/CSS04 - Responsive Web Site Sample/index.html" >Assignment 04</a></div>
+            <div class="assignment_div"><a href="assignment/CSS05 - Grid Layout/index.html" >Assignment 05</a></div>
+            <div class="assignment_div"><a href="assignment/CSS-Animation/index.html" >Assignment 06</a></div>
+            <div class="assignment_div"><a href="assignment/CSS07 - image Slide Show/index.html" >Assignment 07</a></div>
+            <div class="assignment_div"><a href="assignment/CSS08 - Car Animation/index.html" >Assignment 08</a></div>
+            <div class="assignment_div"><a href="assignment/CSS09 - Circle Transition/assignment_9_with_jQuery.html" >Assignment 09</a></div>
+            <div class="assignment_div"><a href="assignment/CSS10-Calculator/assignment_10.html" >Assignment 10</a></div>
+            <div class="assignment_div"><a href="assignment/POS/index.html" >POS</a></div>
+
+
+        </div>
+
+
+
+    </section>
+<hr>
+    <section>
+
+        <div class="section_head" style="padding-top: 0">Gallery</div>
+
+        <section class="portfolio_block">
+            <div class="gallery">
+                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=828" alt></div>
+                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=580" alt></div>
+                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=870" alt></div>
+                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=767" alt></div>
+                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=296" alt></div>
+                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=168" alt></div>
+                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=871" alt></div>
+                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=821" alt></div>
+                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=164" alt></div>
+                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=872" alt></div>
+                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=826" alt></div>
+            </div>
+        </section>
+
+    </section>
+
+<hr>
+
+    <section>
+
+        <div class="section_head" style="padding-top: 0">Contact Me</div>
+    </section>
+
+    <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="../assert/jquery-3.7.0.min.js"></script>
+    <script>
+        var $cell = $(".card");
+
+        //open and close card when clicked on card
+        $cell.find(".js-expander").click(function () {
+            var $thisCell = $(this).closest(".card");
+
+            if ($thisCell.hasClass("is-collapsed")) {
+                $cell
+                    .not($thisCell)
+                    .removeClass("is-expanded")
+                    .addClass("is-collapsed")
+                    .addClass("is-inactive");
+                $thisCell.removeClass("is-collapsed").addClass("is-expanded");
+
+                if ($cell.not($thisCell).hasClass("is-inactive")) {
+                    //do nothing
+                } else {
+                    $cell.not($thisCell).addClass("is-inactive");
+                }
+            } else {
+                $thisCell.removeClass("is-expanded").addClass("is-collapsed");
+                $cell.not($thisCell).removeClass("is-inactive");
+            }
+        });
+
+        //close card when click on cross
+        $cell.find(".js-collapser").click(function () {
+            var $thisCell = $(this).closest(".card");
+
+            $thisCell.removeClass("is-expanded").addClass("is-collapsed");
+            $cell.not($thisCell).removeClass("is-inactive");
+        });
+
+    </script>
+
+<script>
+    function changeVisibility(){
+        var div = document.getElementById('nav-bar');
+        var computedStyle = getComputedStyle(div);
+        var backgroundColor = computedStyle.backgroundColor;
+        if(backgroundColor!=="#4f5050"){
+            document.getElementById('nav-bar').style.background="#4f5050";
+        }else{
+            // document.getElementById('nav-bar').style.background=
+
+        }
+    }
+</script>
 
 </body>
 </html>

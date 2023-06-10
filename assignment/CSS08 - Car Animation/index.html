@@ -1,0 +1,98 @@
+<!--Car animation-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS08 - Ruvini Rangathara</title>
+    <link rel="stylesheet" href="assests/css/normalize.css">
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        main {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background: url("assests/img/sky.jpg");
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+        }
+
+        .car {
+            height: 150px;
+            width: 320px;
+            bottom: 18%;
+            position: fixed;
+            margin-left: 400px;
+        }
+
+        .wheel1 {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 20%;
+            margin-left: 422px;
+            animation: rotate 10s infinite;
+        }
+
+        .wheel2 {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 20%;
+            margin-left: 620px;
+            animation: rotate 10s infinite;
+        }
+
+        .road {
+            position: absolute;
+            width: 300vw;
+            height: 35%;
+            bottom: 0;
+            margin-left: 0;
+            animation: moving 10s infinite;
+        }
+
+        .city {
+            position: absolute;
+            width: 300vw;
+            height: 65%;
+            bottom: 35%;
+            margin-left: 0;
+            animation: moving 10s infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(720deg);
+            }
+            100%{
+                transform: rotate(540deg);
+            }
+        }
+
+        @keyframes moving {
+            0% {
+                transform: translateX(0px);
+            }
+            100% {
+                transform: translateX(-2100px);
+            }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <img class="city" src="assests/img/city.png">
+    <img class="road" src="assests/img/road.jpg">
+    <img class="car" src="assests/img/car.png">
+    <img class="wheel1" src="assests/img/wheel.png">
+    <img class="wheel2" src="assests/img/wheel.png">
+</main>
+</body>
+</html>

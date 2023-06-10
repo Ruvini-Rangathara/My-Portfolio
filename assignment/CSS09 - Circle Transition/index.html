@@ -1,0 +1,64 @@
+<!--circle transition-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS09 - Ruvini Rangathara</title>
+    <link rel="stylesheet" href="assests/css/normalize.css">
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        section {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            width: 360px;
+            height: 360px;
+            background: white;
+            border-radius: 100%;
+            border: 15px solid gray;
+            border-top: 15px solid crimson;
+        }
+
+        section > div:nth-child(1) {
+            position: relative;
+            top: 40px;
+            left: 140px;
+            margin: auto;
+            width: 1px;
+            height: 1px;
+            background: red;
+            border-radius: 100%;
+            border: 15px solid red;
+        }
+        section > div:nth-child(2) {
+            position: absolute;
+            top: 0;
+            bottom: 140px;
+            right: 0;
+            left: 150px;
+            margin: auto;
+            width: 15px;
+            height: 190px;
+            background: red;
+            transform: rotate(50deg);
+        }
+
+        section:hover {
+            transform: rotate(360deg);
+            transition: all 2s;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div></div>
+    <div></div>
+</section>
+</body>
+</html>

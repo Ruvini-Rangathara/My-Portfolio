@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+body{
+  margin: 0;
+}
+    ::-webkit-scrollbar{
+      width: 0;
+    }
+    section{
+      width: 100vw;
+      height: 100vh;
+    }
+    div{
+      background-color: red;
+      width: 120px;
+      height: 60px;
+      position: relative;
+      top: 10px;
+      left: 10px;
+      border-radius: 20px;
+      animation-name:my-animation;
+      animation-duration: 5s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes my-animation {
+      0%{
+        /*transform: rotate(0deg);*/
+        top: 10px;
+        left: 10px;
+        background-color: red;
+    }
+      25%{
+        transform: rotate(-180deg);
+        top: 90vh;
+        left: 10px;
+        background-color: #6F1919;
+      }
+      50%{
+        transform: rotate(180deg);
+        top: 90vh;
+        left: 85vw;
+        background-color: deeppink;
+      }
+
+      75%{
+        transform: rotate(-180deg);
+        top: 10px;
+        left: 85vw;
+        background-color: #6a6047;
+      }
+    }
+  </style>
+</head>
+<body>
+<section>
+<div></div>
+</section>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS02 - Ruvini Rangathara</title>
+    <style>
+        body > section {
+            height: 100vh;
+            /*border: 2px solid red;*/
+        }
+
+        .circle1 {
+            height: 300px;
+            width: 300px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 15px solid rgba(163, 82, 23, 0.97);
+            border-radius: 50%;
+        }
+
+        .circle2 {
+            height: 275px;
+            width: 275px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 15px solid #ff0000;
+            border-radius: 50%;
+        }
+
+        .full-circle-1{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: purple;
+            border-radius: 100%;
+        }
+        .full-circle-2{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #0b84af;
+            border-radius: 100%;
+        }
+
+        .full-circle-3{
+            width: 290px;
+            height: 290px;
+            position: relative;
+            top: 51%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(208, 56, 56, 0.97);
+            border-radius: 100%;
+        }
+
+        .hello-h1{
+            width: max-content;
+            height: max-content;
+            color: white;
+            font-size: 35px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .welcome-h1{
+            width: max-content;
+            height: max-content;
+            color: white;
+            font-size: 35px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .ijse-h1{
+            width: max-content;
+            height: max-content;
+            color: white;
+            font-size: 35px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <div class="full-circle-1"><h1 class="hello-h1">Hello</h1></div>
+</section>
+<section>
+    <div class="full-circle-2"><h1 class="welcome-h1">Welcome to</h1></div>
+</section>
+<section>
+    <div class="full-circle-3"><h1 class="ijse-h1">Institute <br> of <br> Software <br> Engineering</h1></div>
+</section>
+
+<div class="circle1"></div>
+<div class="circle2"></div>
+
+</body>
+</html>
