@@ -1,276 +1,224 @@
-.schedules__time::after, .schedules__time::before, .card__title::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -1.5rem;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-    width: 1.2rem;
-    height: 1.2rem;
-    border-radius: 50%;
-    background-color: inherit;
-    box-shadow: inset 0 0 0 0.3428571429rem;
-    transition: all 0.5s;
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+:root {
+    --d: 700ms;
+    --e: cubic-bezier(0.19, 1, 0.22, 1);
+    /*--font-sans: "Rubik", sans-serif;*/
+    /*--font-serif: "Cardo", serif;*/
 }
 
-.cards {
+/** {*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*html, body {*/
+/*    height: 100%;*/
+/*}*/
+
+/*body {*/
+/*    display: grid;*/
+/*    place-items: center;*/
+/*}*/
+
+
+.page-content {
+    display: grid;
+    grid-gap: 1rem;
+    /*padding: 1rem;*/
+    max-width: 1024px;
+    margin: 0 auto;
+    /*font-family: var(--font-sans);*/
+    color: white;
+    background-color: #4f5050;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    /*padding-right: 0;*/
+}
+@media (min-width: 600px) {
+    .page-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 800px) {
+    .page-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.assignment_card {
+    /*border-radius: 5px;*/
     position: relative;
-    height: 400px;
-    /*width: 150px;*/
+    display: flex;
+    align-items: flex-end;
     overflow: hidden;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    background-color: whitesmoke;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
 }
-
-.card {
-    position: absolute;
-    z-index: 1;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 1.5rem;
-    color: #fff;
-    transition: all 0.5s;
-    background-image: linear-gradient(to right, transparent calc(1.5rem - 3px), #fff calc(1.5rem - 3px), #fff calc(1.5rem + 3px), transparent calc(1.5rem + 3px));
-    counter-increment: card;
+@media (min-width: 600px) {
+    .assignment_card {
+        height: 150px;
+    }
 }
-.card:nth-of-type(1)::before {
+.assignment_card:before {
     content: "";
     position: absolute;
     top: 0;
-    left: 1.5rem;
-    z-index: 0;
-    transform: translateX(-50%);
-    width: 12px;
-    height: 2rem;
-    background-color: inherit;
-}
-.card:nth-of-type(1) {
-    transform: translateY(calc(0 * (100% - 1.5rem)));
-}
-.card:nth-of-type(5n + 1) {
-    background-color: #6dcff6;
-}
-.card:nth-of-type(2) {
-    transform: translateY(calc(0.2 * (100% - 1.5rem)));
-}
-.card:nth-of-type(5n + 2) {
-    background-color: #8882ee;
-}
-.card:nth-of-type(3) {
-    transform: translateY(calc(0.4 * (100% - 1.5rem)));
-}
-.card:nth-of-type(5n + 3) {
-    background-color: #dee170;
-}
-.card:nth-of-type(4) {
-    transform: translateY(calc(0.6 * (100% - 1.5rem)));
-}
-.card:nth-of-type(5n + 4) {
-    background-color: #71b8ca;
-}
-.card:nth-of-type(5) {
-    transform: translateY(calc(0.8 * (100% - 1.5rem)));
-}
-.card:nth-of-type(5n + 5) {
-    background-color: #e77fa0;
-}
-
-.cards.is-active .card {
-    transform: translateY(0) !important;
-}
-.cards.is-active .card.is-active {
-    transform: translateY(7.5%) !important;
-}
-.cards.is-active .card.is-active .card__title {
-    transform: translateY(0);
-}
-.cards.is-active .card.is-active .card__title::after {
-    transform: scale(1);
-}
-.cards.is-active .card.is-active .schedules {
-    opacity: 1;
-}
-.cards.is-active .card:nth-of-type(1).is-active {
-    transform: translateY(0%) !important;
-}
-.cards.is-active .card.is-active ~ .card {
-    transform: translateY(100%) !important;
-}
-.cards.is-active .card.is-active + .card {
-    transform: translateY(calc(92.5% - 1.5rem)) !important;
-}
-.cards.is-active .card__title {
-    transform: translateY(-25%);
-}
-.cards.is-active .card__title::after {
-    transform: scale(0.6);
-}
-
-.card__title {
-    position: relative;
-    margin: 0 1.5rem 0.25em 3rem;
-    padding-top: 1rem;
-    background-color: inherit;
-    font-size: 2rem;
-    font-weight: 900;
-    text-transform: capitalize;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-.card__title::after {
-    content: "Assignment " counter(card);
-    display: block;
-    transition: transform 0.3s;
-    transform-origin: 0% 50%;
-}
-.card__title::before {
-    top: calc(50% + .5rem);
-    box-shadow: inset 0 0 0 0.3428571429rem;
-}
-.card.is-active .card__title::before {
-    box-shadow: inset 0 0 0 1.2rem;
-}
-
-.schedules {
-    background-color: inherit;
-    max-height: calc(100% - 4rem);
-    background-image: inherit;
-    padding-left: 3rem;
-    padding-right: 1.5rem;
-    padding-bottom: 114px;
-    overflow: auto;
-    transition: opacity 0.3s;
-    opacity: 0;
-}
-
-.schedules__time {
-    position: relative;
-    margin-bottom: 0.25rem;
-    white-space: nowrap;
-    background-color: inherit;
-}
-.schedules__time::before {
-    font-size: 1.6em;
-    box-shadow: none;
-    transform: translate(-50%, -50%) scale(0);
-    transition-delay: 0.3s;
-}
-.schedules__time::after {
-    width: 0.6em;
-    height: 0.6em;
-    box-shadow: inset 0 0 0 1.2rem;
-    transform: translate(-50%, -50%) scale(0);
-    transition-delay: 0.5s;
-}
-.card.is-active .schedules__time::before, .card.is-active .schedules__time::after {
-    transform: translate(-50%, -50%) scale(1);
-    transition-delay: 0.3s;
-}
-.card.is-active .schedules__time::after {
-    transition-delay: 0.35s;
-}
-
-.schedules__info {
-    margin-bottom: 1rem;
-}
-.schedules__info span {
-    color: transparent;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.new-card {
-    position: relative;
-    z-index: 1;
+    left: 0;
     width: 100%;
-    height: 6rem;
-    margin-top: -1.5rem;
-    border: none;
-    border-radius: 1.5rem;
-    outline: none;
-    font-size: 1.2rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #999;
-    background: #fff;
-    cursor: pointer;
+    height: 110%;
+    background-size: cover;
+    background-position: 0 0;
+    transition: transform calc(var(--d) * 1.5) var(--e);
+    pointer-events: none;
+    box-shadow: 1px 1px 3px 2px #2c3034;
 }
-.new-card:active {
-    top: 1px;
-}
-.new-card::before {
+.assignment_card:after {
     content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 0.9em;
-    height: 0.9em;
-    margin-right: 0.5em;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0 0 0 3px;
-    background-image: linear-gradient(0deg, transparent calc(50% - 1px), currentColor calc(50% - 1px), currentColor calc(50% + 1px), transparent calc(50% + 1px)), linear-gradient(90deg, transparent calc(50% - 1px), currentColor calc(50% - 1px), currentColor calc(50% + 1px), transparent calc(50% + 1px));
-}
-
-.box {
-    width: 360px;
-    margin: 0 auto;
-    font-family: sans-serif;
-    line-height: 1.5;
-    border-radius: 1.5rem;
-    box-shadow: 0 1.5rem 6rem -1rem rgba(0, 0, 0, 0.3);
-}
-.box img {
-    max-width: 100%;
-    height: auto;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    height: 100%;
-}
-
-body {
-    min-height: 100%;
-    margin: 0;
-    background-color: #d4ffe4;
-    color: #222;
-}
-
-.intro {
-    width: 80%;
-    max-width: 30rem;
-    padding-bottom: 1rem;
-    margin: 0 auto 1em;
-    padding-top: 0.5em;
-    text-align: center;
-    text-transform: capitalize;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8), 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-.intro small {
     display: block;
-    opacity: 0.5;
-    font-style: italic;
-    text-transform: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    pointer-events: none;
+    /*background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);*/
+    transform: translateY(-50%);
+    transition: transform calc(var(--d) * 2) var(--e);
+}
+.assignment_card:before {
+    background-color: dimgrey;
+}
+/*.assignment_card:nth-child(2):before {*/
+/*    background-color: dimgrey;*/
+/*}*/
+/*.assignment_card:nth-child(3):before {*/
+/*    background-color: dimgrey;*/
+/*}*/
+/*.card:nth-child(4):before {*/
+/*    background-color: dimgrey;*/
+/*}*/
+/*.card:nth-child(5):before {*/
+/*    background-color: dimgrey;*/
+/*}*/
+/*.card:nth-child(6):before {*/
+/*    background-color: dimgrey;*/
+/*}*/
+/*.card:nth-child(7):before {*/
+/*    background-color: dimgrey;*/
+/*}*/
+/*.card:nth-child(8):before {*/
+/*    background-color: dimgrey;*/
+/*}*/
+/*.card:nth-child(9):before {*/
+/*    background-color: dimgrey;*/
+/*}*/
+/*.card:nth-child(10):before {*/
+/*    background-color: dimgrey;*/
+/*}*/
+/*.card:nth-child(11):before {*/
+/*    background-color: dimgrey;*/
+/*}*/
+/*.card:nth-child(12):before {*/
+/*    background-color: dimgrey;*/
+/*}*/
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /*padding: 1rem;*/
+    transition: transform var(--d) var(--e);
+    z-index: 1;
+}
+.content > * + * {
+    margin-top: 1rem;
 }
 
-.info {
-    position: absolute;
-    position: fixed;
-    bottom: 0;
-    right: 0;
+.title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.2;
     margin: 0;
-    padding: 1em;
-    font-size: 0.9em;
-    font-style: italic;
-    font-family: serif;
-    text-align: right;
-    opacity: 0.5;
+    color: white;
 }
-.info a {
-    color: inherit;
+
+.copy {
+    /*font-family: var(--font-serif);*/
+    font-size: 1.125rem;
+    /*font-style: italic;*/
+    line-height: 1.35;
+    margin: 10px;
+}
+
+.btn {
+    cursor: pointer;
+    /*margin-top: 1.5rem;*/
+    padding: 0.5rem ;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.025rem;
+    text-transform: uppercase;
+    background-color: #2c3034;
+    border: none;
+    width: 50px;
+    border-radius: 10px;
+    margin: 0;
+    color: white;
+}
+.btn:hover {
+    background-color: darkslategrey;
+}
+/*.btn:focus {*/
+/*    outline: 1px dashed yellow;*/
+/*    outline-offset: 3px;*/
+/*}*/
+
+@media (hover: hover) and (min-width: 600px) {
+    .assignment_card:after {
+        transform: translateY(0);
+    }
+
+    .content {
+        transform: translateY(calc(100% - 4.5rem));
+    }
+    .content > *:not(.title) {
+        opacity: 0;
+        transform: translateY(1rem);
+        transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+    }
+
+    .assignment_card:hover,
+    .assignment_card:focus-within {
+        align-items: center;
+    }
+    .assignment_card:hover:before,
+    .assignment_card:focus-within:before {
+        transform: translateY(-4%);
+    }
+    .assignment_card:hover:after,
+    .assignment_card:focus-within:after {
+        transform: translateY(-50%);
+    }
+    .assignment_card:hover .content,
+    .assignment_card:focus-within .content {
+        transform: translateY(0);
+    }
+    .assignment_card:hover .content > *:not(.title),
+    .assignment_card:focus-within .content > *:not(.title) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: calc(var(--d) / 8);
+    }
+
+    .assignment_card:focus-within:before, .card:focus-within:after,
+    .assignment_card:focus-within .content,
+    .assignment_card:focus-within .content > *:not(.title) {
+        transition-duration: 0s;
+    }
 }

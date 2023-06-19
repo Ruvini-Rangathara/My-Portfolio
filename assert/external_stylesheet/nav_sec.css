@@ -3,18 +3,13 @@
 }
 #n {
 
-    background-color:#2a2727;!important;
+    background-color:#4f5050;!important;
     padding: 0;
     position: fixed;
-    width: 60%;
+    width: 100%;
     z-index: 5;
-    /*box-shadow: 0px 2px 4px #2c3034;*/
-    border-radius: 100px 100px 100px 100px;
     height: fit-content;
     right: 0;
-    /*margin: auto;*/
-    margin-top: 0.5%;
-    margin-right: 30px;
 }
 
 
@@ -24,32 +19,31 @@
     color: white;
     margin-right: 80px;
 }
+
 #hamburger_id{
     border: 0px;
-    /*background-color: blue;*/
     width: 28px;
     height: 25px;
     padding: 0;
 }
+
 #hamburger_id:hover{
     border: 0px solid #4f5050;!important;
-
 }
+
 #hamburger{
     width: 20px;
 }
+
 #logo {
     width: 35px;
     height: 35px;
-    /*margin-right: 10px;*/
 }
+
 .container-fluid{
-    background-color: #4f5050;!important;
-    border-radius: 18px;
+    background-color: #2a2727;!important;
     width: 100%;
-    height: 31px;
-    border: 1px solid #373b3e;
-    box-shadow: 2px 2px 5px 1px #373b3e;
+    height: 50px;
 }
 
 .section_head{
@@ -57,8 +51,6 @@
     justify-content: center;
     align-items: start;
     color: #FFA800;
-    /*padding-left: 20px;*/
-    /*padding-right: 20px;*/
     width: 200px;
     font-size: 25px;
     align-self:center;
@@ -70,14 +62,22 @@
     width: 200px;
     height: fit-content;
 }
+
 #my_name{
+    letter-spacing: 20px;
     font-size: 40px;
     text-align: center;
     color: white;
 }
+
+#my_position{
+    text-align: center;
+}
+
 #about_me_para_div{
     width: 800px;
     padding: 40px 40px 0px 40px;
+
 }
 #about_me_sec{
     display: flex;
@@ -94,4 +94,156 @@
 
 #about-me-link, #education-link, #skills-link, #projects-link, #gallery-link, #contact-me-link{
     color: white;
+}
+
+#about-me-link:hover, #education-link:hover, #skills-link:hover, #projects-link:hover, #gallery-link:hover, #contact-me-link:hover{
+    color: #FFA800;
+    opacity: 60%;
+}
+
+
+
+
+
+/*=========================================      Animation        ==============================================*/
+
+@import url("https://fonts.googleapis.com/css?family=Syncopate");
+
+
+html {
+    /* subtlepatterns.com */
+    background: url("http://neilcarpenter.com/demos/asfalt.png") repeat;
+}
+body {
+    background: radial-gradient(
+            ellipse at center,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.44) 100%
+    );
+}
+#my_name {
+    letter-spacing: 10px;
+    display: table-cell;
+    text-align: center;!important;
+    vertical-align: middle;
+    font-size: 2em;
+    line-height: 2em;
+
+    -webkit-font-smoothing: antialiased;
+    font-family: "Syncopate", Helvetica, Arial;
+    text-transform: uppercase;
+
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+
+}
+article {
+    display: inline-block;
+    font-style: normal;
+    padding: 0 0.25em;
+    -webkit-transform: scale(0) translate3d(0, -2000px, 0);
+    -moz-transform: scale(0) translate3d(0, -2000px, 0);
+    -ms-transform: scale(0) translate3d(0, -2000px, 0);
+    -o-transform: scale(0) translate3d(0, -2000px, 0);
+    transform: scale(0) translate3d(0, -2000px, 0);
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+article.fly-in-out {
+    -webkit-animation: fly-in-out 3s infinite ease-in-out;
+    -moz-animation: fly-in-out 3s infinite ease-in-out;
+    -o-animation: fly-in-out 3s infinite ease-in-out;
+    animation: fly-in-out 3s infinite ease-in-out;
+}
+
+@-webkit-keyframes fly-in-out {
+    0% {
+        -webkit-transform: scale(0) translate3d(0, -1000px, 0);
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+    }
+    15%,
+    85% {
+        color: rgba(255, 255, 255, 0.8);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        -webkit-transform: scale(1) translate3d(0, 0, 0);
+        background: transparent;
+        box-shadow: none;
+    }
+    100% {
+        color: transparent;
+        -webkit-transform: scale(0) translate3d(0, 1000px, 0);
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+    }
+}
+@-moz-keyframes fly-in-out {
+    0% {
+        -moz-transform: scale(0) translate3d(0, -2000px, 0);
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+    }
+    15%,
+    85% {
+        color: rgba(255, 255, 255, 0.8);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        -moz-transform: scale(1) translate3d(0, 0, 0);
+        background: transparent;
+        box-shadow: none;
+    }
+    100% {
+        color: transparent;
+        -moz-transform: scale(0) translate3d(0, 2000px, 0);
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+    }
+}
+@-o-keyframes fly-in-out {
+    0% {
+        -o-transform: scale(0) translate3d(0, -2000px, 0);
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+    }
+    15%,
+    85% {
+        color: rgba(255, 255, 255, 0.8);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        -o-transform: scale(1) translate3d(0, 0, 0);
+        background: transparent;
+        box-shadow: none;
+    }
+    100% {
+        color: transparent;
+        -o-transform: scale(0) translate3d(0, 2000px, 0);
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+    }
+}
+@keyframes fly-in-out {
+    0% {
+        transform: scale(0) translate3d(0, -2000px, 0);
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+    }
+    15%,
+    85% {
+        color: rgba(255, 255, 255, 0.8);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        transform: scale(1) translate3d(0, 0, 0);
+        background: transparent;
+        box-shadow: none;
+    }
+    100% {
+        color: transparent;
+        transform: scale(0) translate3d(0, 2000px, 0);
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+    }
 }

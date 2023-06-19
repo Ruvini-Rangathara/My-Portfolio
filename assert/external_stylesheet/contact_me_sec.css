@@ -1,0 +1,321 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,600);
+/*html {*/
+/*    background: #f4fcfa;*/
+/*}*/
+
+/*body {*/
+/*    padding: 5em 0;*/
+/*}*/
+
+#contact_main_div{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#contact_first_div{
+    width: 500px;
+}
+
+#contact_second_div{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nice-form {
+    font-family: lato;
+}
+.nice-form * {
+    box-sizing: border-box;
+}
+.nice-form fieldset {
+    padding: 1em 1em;
+    margin: 1em;
+    border: 1px solid dimgrey;
+    border-radius: 5px;
+}
+.nice-form legend {
+    color: white;
+    padding: 0 1em;
+    font-size: 1.4em;
+    font-weight: 100;
+}
+.nice-form label.is-replaced {
+    color: antiquewhite;
+    position: absolute;
+    line-height: 50px;
+    padding: 0 0.6em;
+    right: 0;
+    top: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    opacity: 0.4;
+    min-width: 100%;
+    pointer-events: none;
+    transform-origin: top right;
+    transition: all 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.nice-form input:not([type=submit]),
+.nice-form input:not([type=reset]),
+.nice-form input:not([type=button]),
+.nice-form input:not([type=radio]),
+.nice-form input:not([type=checkbox]),
+.nice-form textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 50px;
+    border: 1px solid rgba(112, 128, 144, 0.5);
+    border-radius: 3px;
+    padding: 0 0.6em;
+    transition: 0.2s ease, min-height;
+}
+.nice-form input:not([type=submit]).filled,
+.nice-form input:not([type=reset]).filled,
+.nice-form input:not([type=button]).filled,
+.nice-form input:not([type=radio]).filled,
+.nice-form input:not([type=checkbox]).filled,
+.nice-form textarea.filled {
+    border: 1px solid slategrey;
+}
+.nice-form input:not([type=submit]):focus,
+.nice-form input:not([type=reset]):focus,
+.nice-form input:not([type=button]):focus,
+.nice-form input:not([type=radio]):focus,
+.nice-form input:not([type=checkbox]):focus,
+.nice-form textarea:focus {
+    border-color: whitesmoke;
+    box-shadow: inset 0 0 2px whitesmoke;
+    outline: none;
+}
+.nice-form textarea {
+    padding-top: 0.9em;
+    min-height: 8em;
+}
+.nice-form .input-group {
+    position: relative;
+    overflow: hidden;
+}
+.nice-form .input-group:not(:last-child) {
+    margin-bottom: 1em;
+}
+.nice-form .input-group input:not([type=submit]):focus ~ label,
+.nice-form .input-group input:not([type=reset]):focus ~ label,
+.nice-form .input-group input:not([type=button]):focus ~ label,
+.nice-form .input-group input:not([type=radio]):focus ~ label,
+.nice-form .input-group input:not([type=checkbox]):focus ~ label,
+.nice-form .input-group textarea:focus ~ label {
+    transform: translateX(2em);
+    color: whitesmoke;
+    opacity: 0.55;
+}
+.nice-form .input-group input:not([type=submit]).filled ~ label,
+.nice-form .input-group input:not([type=reset]).filled ~ label,
+.nice-form .input-group input:not([type=button]).filled ~ label,
+.nice-form .input-group input:not([type=radio]).filled ~ label,
+.nice-form .input-group input:not([type=checkbox]).filled ~ label,
+.nice-form .input-group textarea.filled ~ label {
+    transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1), transform 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transform: translateX(0);
+    right: 0;
+    min-width: 1%;
+}
+.nice-form .input-group input:not([type=submit]).filled-medium ~ label,
+.nice-form .input-group input:not([type=reset]).filled-medium ~ label,
+.nice-form .input-group input:not([type=button]).filled-medium ~ label,
+.nice-form .input-group input:not([type=radio]).filled-medium ~ label,
+.nice-form .input-group input:not([type=checkbox]).filled-medium ~ label,
+.nice-form .input-group textarea.filled-medium ~ label {
+    transform: scale(0.8) translateY(-0.3em) translateX(0);
+    opacity: 0.5;
+}
+.nice-form .input-group input:not([type=submit]).filled-alot ~ label,
+.nice-form .input-group input:not([type=reset]).filled-alot ~ label,
+.nice-form .input-group input:not([type=button]).filled-alot ~ label,
+.nice-form .input-group input:not([type=radio]).filled-alot ~ label,
+.nice-form .input-group input:not([type=checkbox]).filled-alot ~ label,
+.nice-form .input-group textarea.filled-alot ~ label {
+    transform: scale(0.7) translateY(-0.5em) translateX(0);
+    opacity: 0.5;
+}
+.nice-form button {
+    background: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    font-weight: 600;
+    min-width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+    .nice-form {
+        width: 40em;
+        margin: auto;
+    }
+    .nice-form input:not([type=submit]),
+    .nice-form input:not([type=reset]),
+    .nice-form input:not([type=button]),
+    .nice-form input:not([type=radio]),
+    .nice-form input:not([type=checkbox]),
+    .nice-form textarea,
+    .nice-form .input-group {
+        width: 20em;
+        margin: auto;
+    }
+    .nice-form button {
+        min-width: 0;
+        padding: 0 2em;
+    }
+}
+.emoji {
+    max-width: 20px;
+    position: relative;
+    top: 4px;
+    margin: 0 3px;
+}
+
+.p-contact{
+    color: #FFA800;
+    opacity: 60%;
+}
+
+.input-group{
+    color: white;
+    height: fit-content;
+    margin: 75px;!important;
+}
+
+#contact_first_div{
+    color: white;
+    padding-top: 20px;
+    width: 30%;
+    margin-left: 50px;
+}
+
+input, textarea{
+    background-color: #4f5050;
+    color: white;
+}
+
+#contact_info_p{
+    line-height: 30px;
+}
+
+/*.input-group{*/
+
+/*}*/
+
+/*#such{*/
+/*    width: 1000px;*/
+/*}*/
+
+
+/*=====================================================================================*/
+
+/*body {*/
+/*    background: #262626;*/
+/*}*/
+.demopadding {
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    width: 140px;
+    text-align: center;
+}
+.icon {
+    position: relative;
+    text-align: center;
+    width: 0px;
+    height: 0px;
+    padding: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    -khtml-border-radius: 20px 20px 20px 20px;
+    color: #ffffff;
+}
+.icon i {
+    font-size: 20px;
+    position: absolute;
+    left: 9px;
+    top: 10px;
+}
+.icon.social {
+    float: left;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+    background: #6d6e71;
+    color: #262626;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.icon.social:hover {
+    background: #262626;
+    color: #6d6e71;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.8));
+    -moz-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.8));
+    /*-ms-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.8));*/
+    -o-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.8));
+    filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.8));
+}
+.icon.social.fb i {
+    left: 13px;
+    top: 10px;
+}
+.icon.social.tw i {
+    left: 11px;
+}
+.icon.social.in i {
+    left: 11px;
+}
+
+#fb_icon, #tw_icon, #in_icon, #ig_icon, #gh_icon, #wa_icon{
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1200px)  {
+    #contact_main_div{
+        padding-left: 50px;
+        padding-right: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .demopadding {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #contact_first_div{
+        width: 70%;
+        text-align: center;
+        margin: 0;
+    }
+    #contact_second_div{
+
+    }
+
+    #contact_third_div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+

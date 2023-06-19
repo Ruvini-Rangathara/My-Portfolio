@@ -10,19 +10,33 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <link href="../assert/external_stylesheet/nav_sec.css" rel="stylesheet">
     <link href="../assert/external_stylesheet/project_sec.css" rel="stylesheet">
     <link href="../assert/external_stylesheet/certificate_card.css" rel="stylesheet">
     <link href="../assert/external_stylesheet/education_card.css" rel="stylesheet">
     <link href="../assert/external_stylesheet/experience_sec.css" rel="stylesheet">
-    <link href="../assert/external_stylesheet/gallery_sec.css" rel="stylesheet">
+<!--    <link href="../assert/external_stylesheet/gallery_sec.css" rel="stylesheet">-->
+    <link href="../assert/external_stylesheet/contact_me_sec.css" rel="stylesheet">
+    <link href="../assert/external_stylesheet/assignment_sec.css" rel="stylesheet">
 
 
     <style>
+
+
         body{
-            background-color: #2a2727;
+            /*background-color: #2a2727;*/
+            background: url("http://neilcarpenter.com/demos/asfalt.png") repeat;
             padding: 0;
+
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+            background-color: transparent;
         }
 
         hr{
@@ -36,6 +50,7 @@
             border-style: solid;
         }
 
+
         #about_me_sec p {
             color: white;
 
@@ -43,24 +58,20 @@
 
 
 
-        .assignment_main{
-            display: flex;
-            justify-content: space-between;
+        a{
+            color: black;
         }
 
-        .assignment_div{
-            width: 100px;
-            height: 100px;
-            background-color: grey;
-            color: black;
-            margin: 10px;
+        #footer{
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        a{
-            color: black;
+        #footer_p{
+            color: #FFA800;
+
+            opacity: 60%;
         }
 
 
@@ -79,24 +90,24 @@
 
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav" id="nav-bar">
-                        <a href="index.html" class="nav-item nav-link active" id="about-me-link">&nbsp;About Me</a>
-                        <a href="Manage_Orders.html" class="nav-item nav-link" id="education-link">&nbsp;Education</a>
-                        <a href="Manage_Items.html" class="nav-item nav-link" id="skills-link">&nbsp;Skills</a>
-                        <a href="Manage_Customer.html" class="nav-item nav-link" id="projects-link">&nbsp;Projects</a>
-                        <a href="Manage_Customer.html" class="nav-item nav-link" id="gallery-link">&nbsp;Gallery</a>
-                        <a href="Manage_Customer.html" class="nav-item nav-link" id="contact-me-link">&nbsp;Contact Me</a>
+                        <a href="#about_me_sec" class="nav-item nav-link active" id="about-me-link">&nbsp;About Me</a>
+                        <a href="#id-education" class="nav-item nav-link" id="education-link">&nbsp;Education</a>
+                        <a href="#exper_skill_id" class="nav-item nav-link" id="skills-link">&nbsp;Skills</a>
+                        <a href="#project-id" class="nav-item nav-link" id="projects-link">&nbsp;Projects</a>
+                        <a href="#gallery-id" class="nav-item nav-link" id="gallery-link">&nbsp;Gallery</a>
+                        <a href="#contactMe-id" class="nav-item nav-link" id="contact-me-link">&nbsp;Contact Me</a>
                         <!--          <a href="#" class="nav-item nav-link disabled" tabindex="-1">Reports</a>-->
                     </div>
                 </div>
             </div>
         </nav>
-    <br><br>
+    <br><br><br><br>
     <section id="about_me_sec">
         <div class="section_head">About Me</div>
         <div id="about_me_para_div" >
 
             <h1 id="my_name">Ruvini Rangathara</h1>
-            <p>Full-Stack developer  Web Developer</p>
+            <p id="my_position">Full-Stack developer  Web Developer</p>
             <br><br>
             <p>Hello, I’m Ruvini Rangathara. I’m 23 years old
                 young and highly active enthusiast. I’m a developer
@@ -109,7 +120,7 @@
                 coding and software development.</p>
 
             <button>Download CV</button>
-
+            <br><br><br>
 
         </div>
         <div id="about_pic_div">
@@ -124,30 +135,30 @@
         <h3>Life Long Learning</h3>
         <br>
         <ol>
-            <li style="--accent-color:#989898">
+            <li style="--accent-color:#989898" class="edu_list">
                 <div class="icon"><img src="assert/image/icons8-graduation-cap-50.png"></div>
                 <div class="title">IJSE</div>
                 <div class="descr">BSc (Hons) In Computer Science
                     Institute Of Software Engineering
                     Panadura.</div>
             </li>
-            <li style="--accent-color:#808080">
+            <li style="--accent-color:#808080" class="edu_list">
                 <div class="icon"><img src="assert/image/icons8-graduation-cap-50.png"></div>
                 <div class="title">UOJ</div>
                 <div class="descr"><p>University Of Sri Jayewardenepura</p>2022 - Physical Sciences Selected.</div>
             </li>
-            <li style="--accent-color:#757575">
+            <li style="--accent-color:#757575" class="edu_list">
                 <div class="icon"><img src="assert/image/icons8-graduation-cap-50.png"></div>
                 <div class="title">Advanced Level</div>
                 <div class="descr">2019 O/L - Maths Stream <p>Taxila Central College Horana.</p> </div>
             </li>
-            <li style="--accent-color:#555555">
+            <li style="--accent-color:#555555" class="edu_list">
                 <div class="icon"><img src="assert/image/icons8-graduation-cap-50.png"></div>
                 <div class="title">Ordinary Level</div>
                 <div class="descr">2016 O/L - Sinhala Medium <p>Agamethi Balika Maha Vidyalaya
                     Panadura.</p></div>
             </li>
-            <li style="--accent-color:#353839">
+            <li style="--accent-color:#353839" class="edu_list">
                 <div class="icon"><img src="assert/image/icons8-graduation-cap-50.png"></div>
                 <div class="title">Primary Education</div>
                 <div class="descr">Grade  5 scholarship - K / Mahavila
@@ -158,9 +169,11 @@
         <br>
 
     </section>
+<br>
 
 <hr>
 
+<!--    experience and skills-->
     <section>
         <div class="section_head" id="exper_skill_id" style="padding-top: 0">Experiences & Skills</div>
 
@@ -288,11 +301,28 @@
 
 
     </section>
-<br>
 
+    <div class="wrapper1">
+        <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
+            <li><img class="skills_icon" src="assert/image/skill_icon/icons8-java.svg"></li>
+            <li><img class="skills_icon" src="assert/image/skill_icon/icons8-mysql.svg"></li>
+            <li><img class="skills_icon" src="assert/image/skill_icon/icons8-intellij-idea.svg"></li>
+            <li><img class="skills_icon" src="assert/image/skill_icon/icons8-github.svg"></li>
+            <li><img class="skills_icon" src="assert/image/skill_icon/icons8-html5.svg"></li>
+            <li><img class="skills_icon" src="assert/image/skill_icon/icons8-css.svg"></li>
+            <li><img class="skills_icon" src="assert/image/skill_icon/javascript-1.svg"></li>
+            <li><img class="skills_icon" src="assert/image/skill_icon/icons8-java.svg"></li>
+            <li><img class="skills_icon" src="assert/image/skill_icon/icons8-vs-code.svg"></li>
+            <li><img class="skills_icon" src="assert/image/skill_icon/icons8-scene-builder.svg"></li>
+            <li><img class="skills_icon" src="assert/image/skill_icon/icons8-figma.svg"></li>
+            <li><img class="skills_icon" src="assert/image/skill_icon/icons8-medium.svg"></li>
+        </ul>
+    </div>
+
+    <br>
 <!--    certificate section done-->
     <section>
-        <div class="section_head" style="padding-top: 0">Certificates</div>
+        <div class="section_head" id="certificate-id" style="padding-top: 0">Certificates</div>
 
         <div class="wrapper">
 
@@ -437,7 +467,7 @@
 
 <!--    project section done-->
     <section>
-        <div class="section_head" style="padding-top: 0">Projects</div>
+        <div class="section_head" id="project-id" style="padding-top: 0">Projects</div>
         <br>
         <section id=timeline>
             <!--    <h1>A Flexbox Timeline</h1>-->
@@ -452,9 +482,12 @@
                     </div>
                     <div class="body">
                         <p>
+
                         <p>Room Reservation System Of Blue Ocean Hotel.</p>
                         1st Semester Software Engineering module final Project implemented without Java Database Connectivity.
-                        <p>( Institute Of Software Engineering - IJSE )</p></p>
+                        <p>( Institute Of Software Engineering - IJSE )</p>
+
+                        </p>
                         <p>GitHub Link : <a href="https://github.com/Ruvini-Rangathara/Hotel-Room-Reservation-Management-System.git">See here</a></p>
                         <img src="assert/image/blue-ocean-project.png" alt="Graphic">
                     </div>
@@ -512,11 +545,22 @@
                         <div class="number-box">
                             <span>04</span>
                         </div>
-                        <h2><span class="small">Subtitle</span> Consistency</h2>
+                        <h2><span class="small">Stand Alone Application</span> Hostel Management System</h2>
                     </div>
                     <div class="body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                        <img src="http://placehold.it/1000x500" alt="Graphic">
+
+                        <p>D24 Hostel Management System
+                        <p>
+                            2nd Semester Hibernate Module Final Project implemented using hibernate.
+                        </p>
+                        <p>
+                            ( Institute Of Software Engineering - IJSE )
+                        </p>
+
+                        </p>
+                        <p>GitHub Link : <a href="https://github.com/Ruvini-Rangathara/Hotel-Room-Reservation-Management-System.git">See here</a></p>
+
+                        <img src="assert/image/Hostel.png" alt="Graphic">
                     </div>
                 </div>
 
@@ -525,11 +569,23 @@
                         <div class="number-box">
                             <span>05</span>
                         </div>
-                        <h2><span class="small">Subtitle</span> Conversion</h2>
+                        <h2><span class="small">Chat Application</span> Group Chat Application</h2>
                     </div>
                     <div class="body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                        <img src="http://placehold.it/1000x500" alt="Graphic">
+
+                        <p>Squad Talk Chat Application
+                        <p>
+                            2nd Semester Network Programming Module Final Project implemented using Multi Threaded Programming.
+                        </p>
+                        <p>
+                            ( Institute Of Software Engineering - IJSE )
+                        </p>
+
+                        </p>
+                        <p>GitHub Link : <a href="https://github.com/Ruvini-Rangathara/Chat-Application.git">See here</a></p>
+
+
+                        <img src="assert/image/chatApp2.png" alt="Graphic">
                     </div>
                 </div>
 
@@ -546,84 +602,252 @@
                     </div>
                 </div>
 
-
-
-
-
-
             </div>
         </section>
 
     </section>
 
+    <br>
+    <br>
+    <br>
+<!--    assignment section-->
+
+
+    <section class="page-content">
+
+
+        <div class="assignment_card">
+            <div class="content">
+                <h2 class="title">Assignment 01</h2>
+                <p class="copy">Absolute Position</p>
+                <a class="btn"
+                   href="assignment/CSS01 - Absolute Position/index.html"
+                   target="_blank">View</a>
+            </div>
+        </div>
+        <div class="assignment_card">
+            <div class="content">
+                <h2 class="title">Assignment 02</h2>
+                <p class="copy">Fixed Circles</p>
+                <a class="btn"
+                   href="assignment/CSS02 - Fixed Circles/index.html"
+                   target="_blank">View</a>
+            </div>
+        </div>
+        <div class="assignment_card">
+            <div class="content">
+                <h2 class="title">Assignment 03</h2>
+                <p class="copy">Sticky Cards</p>
+                <a class="btn"
+                   href="assignment/CSS03 - Sticky Cards/index.html"
+                   target="_blank">View</a>
+            </div>
+        </div>
+        <div class="assignment_card">
+            <div class="content">
+                <h2 class="title">Assignment 04</h2>
+                <p class="copy">Responsive Web Site Sample</p>
+                <a class="btn"
+                   href="assignment/CSS04 - Responsive Web Site Sample/index.html"
+                   target="_blank">View</a>
+            </div>
+        </div>
+
+
+        <!--    -=======================================-->
+        <div class="assignment_card">
+            <div class="content">
+                <h2 class="title">Assignment 05</h2>
+                <p class="copy">Grid Layout</p>
+                <a class="btn"
+                   href="assignment/CSS05 - Grid Layout/index.html"
+                   target="_blank">View</a>
+            </div>
+        </div>
+
+        <div class="assignment_card">
+            <div class="content">
+                <h2 class="title">Assignment 06</h2>
+                <p class="copy">Water Drop</p>
+                <a class="btn"
+                   href="assignment/CSS06 - Water Drop/index.html"
+                   target="_blank">View</a>
+            </div>
+        </div>
+
+        <div class="assignment_card">
+            <div class="content">
+                <h2 class="title">Assignment 07</h2>
+                <p class="copy">Image Slide Show</p>
+                <a class="btn"
+                   href="assignment/CSS07 - image Slide Show/index.html"
+                   target="_blank">View</a>
+            </div>
+        </div>
+
+        <div class="assignment_card">
+            <div class="content">
+                <h2 class="title">Assignment 08</h2>
+                <p class="copy">Car Animation</p>
+                <a class="btn"
+                   href="assignment/CSS08 - Car Animation/index.html"
+                   target="_blank">View</a>
+            </div>
+        </div>
+
+        <div class="assignment_card">
+            <div class="content">
+                <h2 class="title">Assignment 09</h2>
+                <p class="copy">Circle Transmission</p>
+                <a class="btn"
+                   href="assignment/CSS09 - Circle Transition/index.html"
+                   target="_blank">View</a>
+            </div>
+        </div>
+
+        <div class="assignment_card">
+            <div class="content">
+                <h2 class="title">Assignment 10</h2>
+                <p class="copy">Calculator</p>
+                <a class="btn"
+                   href="assignment/CSS10-Calculator/assignment_10.html"
+                   target="_blank">View</a>
+            </div>
+        </div>
+
+        <div class="assignment_card">
+            <div class="content">
+                <h2 class="title">Assignment 11</h2>
+                <p class="copy">Knight Rider</p>
+                <a class="btn"
+                   href="assignment/CSS11 - Knight Rider/assignment_9_with_jQuery.html"
+                   target="_blank">View</a>
+            </div>
+        </div>
+
+        <div class="assignment_card">
+            <div class="content">
+                <h2 class="title">Assignment 12</h2>
+                <p class="copy">Animation</p>
+                <a class="btn"
+                   href="assignment/CSS12 - Animation/index.html"
+                   target="_blank">View</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                    </View></button>
+            </div>
+        </div>
+
+    </section>
+
+
+
+<!--    ===================================        Assignment     =============================================================-->
+
+
+
+
+
+<!--<hr>-->
+
+<!--    gallery section-->
+<!--    <section>-->
+
+<!--        <div class="section_head" id="gallery-id" style="padding-top: 0">Gallery</div>-->
+
+<!--        <section class="portfolio_block">-->
+<!--            <div class="gallery">-->
+<!--                <div class="img_box blur"><img src="assert/image/gallery01.jpeg" alt></div>-->
+<!--                <div class="img_box blur"><img src="assert/image/gallery01.jpeg" alt></div>-->
+<!--                <div class="img_box blur"><img src="assert/image/gallery01.jpeg" alt></div>-->
+<!--                <div class="img_box blur"><img src="assert/image/gallery01.jpeg" alt></div>-->
+<!--                <div class="img_box blur"><img src="assert/image/gallery05.jpeg" alt></div>-->
+<!--                <div class="img_box blur"><img src="assert/image/gallery05.jpeg" alt></div>-->
+<!--                <div class="img_box blur"><img src="assert/image/gallery05.jpeg" alt></div>-->
+<!--                <div class="img_box blur"><img src="assert/image/gallery02.jpeg" alt></div>-->
+<!--                <div class="img_box blur"><img src="assert/image/gallery02.jpeg" alt></div>-->
+<!--                <div class="img_box blur"><img src="assert/image/gallery02.jpeg" alt></div>-->
+<!--                <div class="img_box blur"><img src="assert/image/gallery02.jpeg" alt></div>-->
+<!--            </div>-->
+<!--        </section>-->
+
+<!--    </section>-->
+    <br>
+
+<hr>
+
+<!--    contact me-->
     <section>
 
-        <div class="section_head" style="padding-top: 0">Assignments</div>
+        <div class="section_head" id="contactMe-id" style="padding-top: 0">Contact Me</div>
+
+        <div id="contact_main_div">
+
+            <div id="contact_first_div">
+
+                <p class="p-contact">Feel free to get in touch with me.
+                    I am always open to discussing new projects,
+                    creative ideas or opportunities to be part of your vision.
+                    <img class="emoji" src="https://raw.githubusercontent.com/twitter/twemoji/gh-pages/36x36/1f609.png"/></p>
+
+                <br>
+                <h3>Contact Info</h3>
+                <br>
+                <p id="contact_info_p">
+                    <i class="fa fa-user"></i>
+                    &nbsp;&nbsp; S.A. Ruvini Rangathara<br>
+                    <i class="fa fa-envelope"></i>&nbsp;&nbsp;ruvinisubhasinghe200009@gmail.com<br>
+                    <i class="fa fa-phone"></i>&nbsp;&nbsp;+94786628489<br>
+                    <i class="fa fa-map-marker"></i>&nbsp;&nbsp;No : 48, Miriswaththa, Mahavila, Panadura</p>
 
 
-        <div class="assignment_main">
-            <div class="assignment_div"><a href="assignment/CSS01 - Absolute Position/index.html" >Assignment 01</a></div>
-            <div class="assignment_div"><a href="assignment/CSS02 - Fixed Circles/index.html" >Assignment 02</a></div>
-            <div class="assignment_div"><a href="assignment/CSS03 - Sticky Cards/index.html" >Assignment 03</a></div>
-            <div class="assignment_div"><a href="assignment/CSS04 - Responsive Web Site Sample/index.html" >Assignment 04</a></div>
-            <div class="assignment_div"><a href="assignment/CSS05 - Grid Layout/index.html" >Assignment 05</a></div>
-            <div class="assignment_div"><a href="assignment/CSS-Animation/index.html" >Assignment 06</a></div>
-            <div class="assignment_div"><a href="assignment/CSS07 - image Slide Show/index.html" >Assignment 07</a></div>
-            <div class="assignment_div"><a href="assignment/CSS08 - Car Animation/index.html" >Assignment 08</a></div>
-            <div class="assignment_div"><a href="assignment/CSS09 - Circle Transition/assignment_9_with_jQuery.html" >Assignment 09</a></div>
-            <div class="assignment_div"><a href="assignment/CSS10-Calculator/assignment_10.html" >Assignment 10</a></div>
-            <div class="assignment_div"><a href="assignment/POS/index.html" >POS</a></div>
+            </div>
+            <div id="contact_second_div">
+                <br>
+                <br>
+                <form class="nice-form">
+<!--                    <fieldset>-->
+<!--                        <legend>Contact Me</legend>-->
+                        <div class="input-group" data-group-name="such">
+<!--                            <label for="such">Name : </label>-->
+                            <input type="text" name="such" id="such" placeholder="Name" style="height: 30px"/>
+                        </div>
+                        <div class="input-group" data-group-name="many">
+<!--                            <label for="many">Email : </label>-->
+                            <input type="text" name="many" id="many" placeholder="Email" style="height: 30px"/>
+                        </div>
+                        <div class="input-group" data-group-name="very">
+<!--                            <label for="very">Contact No : </label>-->
+                            <input type="text" name="very" id="very" placeholder="Contact No" style="height: 30px"/>
+                        </div>
+                        <div class="input-group">
+<!--                            <label for="txt">Message : </label>-->
+                            <textarea name="txt" id="txt" placeholder="Enter Message Here"></textarea>
+                        </div>
+                        <div class="input-group">
+                            <button>Submit</button>
+                        </div>
+<!--                    </fieldset>-->
+                </form>
+                <br>
+            </div>
 
+            <div id="contact_third_div">
+                <div class='demopadding'>
+                    <div class='icon social fb' id="fb_icon"><i class='fab fa-facebook'></i></div>
+                    <div class='icon social tw'id="tw_icon"><i class='fab fa-twitter'></i></div>
+                    <div class='icon social in'id="in_icon"><i class='fab fa-linkedin'></i></div>
 
+                    <div class="icon social gh"id="gh_icon"><i class="fab fa-github"></i><a href="https://github.com/Ruvini-Rangathara"></a></div>
+                    <div class="icon social wa"id="wa_icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="icon social ig"id="ig_icon"><i class="fab fa-instagram"></i></div>
+
+                    <br>
+                </div>
+            </div>
         </div>
 
 
 
-    </section>
-<hr>
-    <section>
-
-        <div class="section_head" style="padding-top: 0">Gallery</div>
-
-        <section class="portfolio_block">
-            <div class="gallery">
-                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=828" alt></div>
-                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=580" alt></div>
-                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=870" alt></div>
-                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=767" alt></div>
-                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=296" alt></div>
-                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=168" alt></div>
-                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=871" alt></div>
-                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=821" alt></div>
-                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=164" alt></div>
-                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=872" alt></div>
-                <div class="img_box blur"><img src="https://unsplash.it/600/400?image=826" alt></div>
-            </div>
-        </section>
 
     </section>
-
-<hr>
-
-    <section>
-
-        <div class="section_head" style="padding-top: 0">Contact Me</div>
-    </section>
-
-    <hr>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -677,6 +901,69 @@
         }
     }
 </script>
+
+    <br>
+    <br>
+    <br>
+<footer>
+    <hr>
+    <div id="footer">
+        <p id="footer_p">Copyright &#169;. All right reserved.</p>
+    </div>
+
+</footer>
+<br>
+
+<!--===============================    my name animation    ======================================-->
+    <script>
+        var paragraph = document.getElementById("my_name");
+        var animationCount = 0; // Counter variable to track the number of repetitions
+
+        function textEffect(animationName) {
+            var text = paragraph.innerHTML,
+                chars = text.length,
+                newText = "",
+                animation = animationName,
+                char,
+                i;
+
+            for (i = 0; i < chars; i += 1) {
+                newText += "<article class='i_class'>" + text.charAt(i) + "</article>";
+            }
+
+            paragraph.innerHTML = newText;
+
+            var wrappedChars = document.getElementsByTagName("article"),
+                wrappedCharsLen = wrappedChars.length,
+                j = 0;
+
+            function addEffect() {
+                setTimeout(function () {
+                    wrappedChars[j].className = animation;
+                    j += 1;
+                    if (j < wrappedCharsLen) {
+                        addEffect();
+                    } else {
+                        // Increment the animationCount after each completion of the animation
+                        animationCount += 1;
+                        if (animationCount === 1) {
+                            // Stop the animation after the second repetition
+                            paragraph.innerHTML = text; // Restore the original text
+                            return; // Exit the function to stop further animation
+                        }
+                        // If the desired number of repetitions is not reached, restart the animation
+                        j = 0;
+                        addEffect();
+                    }
+                }, 150);
+            }
+            addEffect();
+        }
+
+        textEffect("fly-in-out");
+    </script>
+
+
 
 </body>
 </html>

@@ -1,28 +1,6 @@
 @import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 
-/**,*/
-/**::before,*/
-/**::after {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    box-sizing: border-box;*/
-/*}*/
-
-body {
-    --color: rgba(30, 30, 30);
-    --bgColor: #2a2727;
-    /*min-height: 100vh;*/
-
-    display: grid;
-    align-content: center;
-    gap: 2rem;
-    padding: 2rem;
-
-    font-family: "Oxygen", sans-serif;
-    color: var(--color);
-    background: var(--bgColor);
-}
 
 h3 {
     text-align: center;
@@ -42,7 +20,9 @@ ol {
     justify-content: center;
 }
 
-li {
+.edu_list {
+    border-radius: 33px 0px 0px 0px;
+    background-color: ghostwhite;
     --frontColor: ghostwhite;
     --width: 10em;
     --inlineP: 0.5rem;
@@ -61,25 +41,25 @@ li {
     margin-bottom: calc(var(--borderR));
     position: relative;
 }
-li .icon,
-li .title,
-li .descr {
+.edu_list .icon,
+.edu_list .title,
+.edu_list .descr {
     background: var(--frontColor);
     padding-inline: 1rem;
     padding-bottom: 1rem;
 }
-li .icon,
-li .title {
+.edu_list .icon,
+.edu_list .title {
     color: var(--accent-color);
     text-align: center;
     padding-bottom: 0.5rem;
 }
 
-li .title,
-li .descr {
+.edu_list .title,
+.edu_list .descr {
     filter: drop-shadow(0.125rem 0.125rem 0.075rem rgba(0, 0, 0, 0.25));
 }
-li .icon {
+.edu_list .icon {
     grid-area: icon;
     font-size: 2rem;
     display: grid;
@@ -88,18 +68,18 @@ li .icon {
     position: relative;
 }
 
-li .title {
+.edu_list .title {
     grid-area: title;
     font-size: 1.1rem;
     font-weight: bold;
 }
 
-li .descr {
+.edu_list .descr {
     grid-area: descr;
     font-size: 0.85rem;
     text-align: center;
 }
-li .descr::before {
+.edu_list .descr::before {
     content: "";
     width: var(--arrowW);
     height: var(--arrowH);
@@ -110,7 +90,7 @@ li .descr::before {
     clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 
-li::after {
+.edu_list::after {
     content: counter(cardnr, decimal-leading-zero);
     position: absolute;
     z-index: -1;
@@ -136,7 +116,7 @@ li::after {
     font-size: calc(var(--borderR) - var(--pad) * 2);
     color: white;
 }
-li::before {
+.edu_list::before {
     content: "";
     position: absolute;
     height: var(--borderR);
@@ -155,5 +135,14 @@ li::before {
     text-align: right;
 }
 .credits a {
-    color: var(--color);
+    /*color: var(--color);*/
+}
+
+.icon img{
+    position: relative;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
