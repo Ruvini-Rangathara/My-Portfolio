@@ -24,14 +24,14 @@
     display: grid;
     grid-gap: 1rem;
     /*padding: 1rem;*/
-    max-width: 1024px;
+    /*max-width: 1024px;*/
     margin: 0 auto;
     /*font-family: var(--font-sans);*/
     color: white;
-    background-color: #4f5050;
+    /*background-color: #4f5050;*/
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 50px;
     /*padding-right: 0;*/
 }
 @media (min-width: 600px) {
@@ -46,6 +46,7 @@
 }
 
 .assignment_card {
+    border: 1px solid #9c7c38;
     /*border-radius: 5px;*/
     position: relative;
     display: flex;
@@ -90,7 +91,7 @@
     transition: transform calc(var(--d) * 2) var(--e);
 }
 .assignment_card:before {
-    background-color: dimgrey;
+    background-color: #2a2727;
 }
 /*.assignment_card:nth-child(2):before {*/
 /*    background-color: dimgrey;*/
@@ -142,7 +143,7 @@
 
 .title {
     font-size: 1.3rem;
-    font-weight: bold;
+    font-weight: normal;
     line-height: 1.2;
     margin: 0;
     color: white;
@@ -161,7 +162,7 @@
     /*margin-top: 1.5rem;*/
     padding: 0.5rem ;
     font-size: 0.8rem;
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.025rem;
     text-transform: uppercase;
     background-color: #2c3034;
@@ -221,4 +222,11 @@
     .assignment_card:focus-within .content > *:not(.title) {
         transition-duration: 0s;
     }
+}
+
+
+#my_assignment {
+    /*margin: 25px 0;*/
+    text-align: center;
+    font-size: 2.75em;
 }
