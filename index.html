@@ -24,6 +24,7 @@
     <link href="assert/external_stylesheet/contact_me_sec.css" rel="stylesheet">
     <link href="assert/external_stylesheet/assignment_sec.css" rel="stylesheet">
     <link href="assert/external_stylesheet/gallery_sec.css" rel="stylesheet">
+    <link href="assert/external_stylesheet/buttons.css" rel="stylesheet">
 
     <style>
 
@@ -110,15 +111,16 @@
     <p class="my_name"> Ruvini Rangathara </p><br>
     <p id="my_position">Full-Stack developer | Web Developer</p>
 </section>
+<br><br>
+<br><br>
 
+<div class="section_head">About Me</div>
 <section id="about_me_sec">
-    <div class="section_head">About Me</div>
     <div id="about_me_para_div">
-
         <h1 id="my_name">Ruvini Rangathara</h1>
 <!--        <p id="my_position">Full-Stack developer Web Developer</p>-->
-        <br><br>
-        <p>Hello, I’m Ruvini Rangathara. I’m 23 years old
+        <br>
+        <p id="about_me_para">Hello, I’m Ruvini Rangathara. I’m 23 years old
             young and highly active enthusiast. I’m a developer
             living in Panadura, Sri Lanka. I’m currently studying
             in Institute Software Engineering (IJSE) and also I’m
@@ -128,8 +130,10 @@
             organized and friendly individual with a passion for
             coding and software development.</p>
 
-        <button>Download CV</button>
-        <br><br><br>
+        <div class="vn-red" style="text-align: center;">
+            <a href="assert/pdf/PRF Interview Questions.pdf" download id="cv_btn">DOWNLOAD CV</a>
+        </div>
+        <br>
 
     </div>
     <div id="about_pic_div">
@@ -146,7 +150,7 @@
 
 
 
-
+<br><br>
 <hr>
 
 <section id="id-education">
@@ -196,6 +200,7 @@
 <hr>
 
 <!--    experience and skills-->
+<br>
 <section>
     <div class="section_head" id="exper_skill_id" style="padding-top: 0">Experiences & Skills</div>
 
@@ -266,14 +271,20 @@
         <li><img class="skills_icon" src="assert/image/skill_icon/icons8-css.svg"></li>
         <li><img class="skills_icon" src="assert/image/skill_icon/javascript-1.svg"></li>
         <li><img class="skills_icon" src="assert/image/skill_icon/icons8-java.svg"></li>
+        <li><img class="skills_icon" src="assert/image/skill_icon/hibernate.png"></li>
         <li><img class="skills_icon" src="assert/image/skill_icon/icons8-vs-code.svg"></li>
         <li><img class="skills_icon" src="assert/image/skill_icon/icons8-scene-builder.svg"></li>
         <li><img class="skills_icon" src="assert/image/skill_icon/icons8-figma.svg"></li>
         <li><img class="skills_icon" src="assert/image/skill_icon/icons8-medium.svg"></li>
     </ul>
 </div>
+<br>
+<br>
+<hr>
 
 <br>
+
+
 <!--    certificate section done-->
 <section>
     <div class="section_head" id="certificate-id" style="padding-top: 0">Certificates</div>
@@ -699,7 +710,7 @@
 
 
 <hr>
-
+<br>
 <!--    gallery section-->
 
     <section>
@@ -768,7 +779,7 @@
 <br>
 
 <hr>
-
+<br>
 <!--    contact me-->
 <section>
 
@@ -797,37 +808,41 @@
 
         </div>
         <div id="contact_second_div">
-            <br>
-            <br>
+
             <form class="nice-form">
+                <br>
+
                 <!--                    <fieldset>-->
-                <!--                        <legend>Contact Me</legend>-->
-                <div class="input-group" data-group-name="such">
-                    <!--                            <label for="such">Name : </label>-->
-                    <input type="text" name="such" id="such" placeholder="Name" style="height: 30px"/>
+                <div class="input-group" >
+                    <input type="text" name="such" id="name" placeholder="Name"/>
                 </div>
-                <div class="input-group" data-group-name="many">
-                    <!--                            <label for="many">Email : </label>-->
-                    <input type="text" name="many" id="many" placeholder="Email" style="height: 30px"/>
+                <br>
+                <div class="input-group">
+                    <input type="text" name="many" id="email" placeholder="Email"/>
                 </div>
+                <br>
                 <div class="input-group" data-group-name="very">
-                    <!--                            <label for="very">Contact No : </label>-->
-                    <input type="text" name="very" id="very" placeholder="Contact No" style="height: 30px"/>
+                    <input type="text" name="very" id="contact_no" placeholder="Contact No"/>
                 </div>
+                <br>
                 <div class="input-group">
-                    <!--                            <label for="txt">Message : </label>-->
-                    <textarea name="txt" id="txt" placeholder="Enter Message Here"></textarea>
+                    <textarea name="txt" id="msg" placeholder="Enter Message Here"></textarea>
                 </div>
-                <div class="input-group">
-                    <button>Submit</button>
+                <br>
+                <div class="btn_input-group">
+                    <button id="submit_btn">Submit</button>
                 </div>
+                <br>
+                <br>
                 <!--                    </fieldset>-->
             </form>
-            <br>
+
         </div>
 
         <div id="contact_third_div">
             <div class='demopadding'>
+                <br>
+                <br>
                 <div class='icon social fb' id="fb_icon"><i class='fab fa-facebook'></i></div>
                 <div class='icon social tw' id="tw_icon"><i class='fab fa-twitter'></i></div>
                 <div class='icon social in' id="in_icon"><i class='fab fa-linkedin'></i></div>

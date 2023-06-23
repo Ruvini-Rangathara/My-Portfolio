@@ -42,6 +42,43 @@ a:visited {
     text-decoration: none !important;
 }
 
+#about_me_para{
+    margin: 0;
+}
+
+#about_me_pic{
+    width: 200px;
+    height: fit-content;
+}
+
+#about_me_para_div{
+    width: 50%;
+    padding: 50px 30px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+#about_me_sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #343434 ;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+#about_pic_div{
+    padding-bottom: 0; !important;
+}
+
+#my_name{
+
+}
+
+
 .my_name {
     font-size: 50px;
     word-spacing: 15px;
@@ -80,11 +117,29 @@ a:visited {
 }
 
 .bg-1 {
-    height: 70vh;
+    height: 75vh;
     margin-top: 50px;
     padding-top: 150px;
     padding-bottom: 50px;
     overflow: auto;
+}
+
+@media (max-width: 720px) {
+    .bg-1 {
+        height: 50vh;
+        padding-top: 90px;
+    }
+
+    #about_me_sec{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+
 }
 
 .bg-1 {
