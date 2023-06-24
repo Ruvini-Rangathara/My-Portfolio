@@ -6,44 +6,20 @@
     /*--font-serif: "Cardo", serif;*/
 }
 
-/** {*/
-/*    box-sizing: border-box;*/
-/*}*/
-
-/*html, body {*/
-/*    height: 100%;*/
-/*}*/
-
-/*body {*/
-/*    display: grid;*/
-/*    place-items: center;*/
-/*}*/
 
 
 .page-content {
     display: grid;
     grid-gap: 1rem;
-    /*padding: 1rem;*/
-    /*max-width: 1024px;*/
-    margin: 0 auto;
-    /*font-family: var(--font-sans);*/
     color: white;
     /*background-color: #4f5050;*/
     justify-content: center;
     align-items: center;
     padding: 60px;
-    /*padding-right: 0;*/
+    margin-right: 10vw;
+    margin-left: 10vw;
 }
-@media (min-width: 600px) {
-    .page-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (min-width: 800px) {
-    .page-content {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
+
 
 .assignment_card {
     border: 1px solid #9c7c38;
@@ -59,11 +35,7 @@
     background-color: whitesmoke;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
 }
-@media (min-width: 600px) {
-    .assignment_card {
-        height: 150px;
-    }
-}
+
 .assignment_card:before {
     content: "";
     position: absolute;
@@ -180,7 +152,16 @@
 /*    outline-offset: 3px;*/
 /*}*/
 
-@media (hover: hover) and (min-width: 600px) {
+
+
+#my_assignment {
+    /*margin: 25px 0;*/
+    text-align: center;
+    font-size: 2.75em;
+}
+
+
+@media (hover: hover)  {
     .assignment_card:after {
         transform: translateY(0);
     }
@@ -225,8 +206,61 @@
 }
 
 
-#my_assignment {
-    /*margin: 25px 0;*/
-    text-align: center;
-    font-size: 2.75em;
+@media screen and (min-width: 720px) {
+    .page-content {
+        grid-template-columns: repeat(4, 1fr);
+        margin-right:50px ;
+        margin-left: 50px;
+
+    }
+    .title{
+        font-size: 20px;
+    }
+
+    .btn{
+        width: 120px;
+        font-size: 17px;
+    }
+
+    .copy{
+        font-size: 17px;
+    }
+
+    .page-content .assignment_card{
+        width: 100%;
+        height: fit-content;
+    }
+}
+@media screen and (max-width: 720px) {
+
+    .page-content {
+        margin-left: 0;
+        margin-right: 0;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .title{
+        font-size: 20px;
+    }
+
+    .copy{
+        font-size: 17px;
+    }
+
+    .btn{
+        width: 120px;
+        font-size: 12px;
+    }
+
+    .page-content .assignment_card{
+        width: 100%;
+        height: 150px;
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+    .assignment_card {
+        height: 150px;
+    }
 }

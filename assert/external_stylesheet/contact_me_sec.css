@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,600);
+/*@import url(https://fonts.googleapis.com/css?family=Lato:300,400,600);*/
 
 #contact_main_div{
     display: flex;
@@ -62,16 +62,15 @@
 .icon {
     position: relative;
     text-align: center;
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     padding: 20px;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    /*border-top-right-radius: 20px;*/
+    /*border-top-left-radius: 20px;*/
+    /*border-bottom-right-radius: 20px;*/
+    /*border-bottom-left-radius: 20px;*/
     -moz-border-radius: 20px 20px 20px 20px;
     -webkit-border-radius: 20px 20px 20px 20px;
-    -khtml-border-radius: 20px 20px 20px 20px;
     color: #ffffff;
 }
 .icon i {
@@ -99,9 +98,6 @@
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     -webkit-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.8));
-    -moz-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.8));
-    /*-ms-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.8));*/
-    -o-filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.8));
     filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.8));
 }
 .icon.social.fb i {
@@ -119,39 +115,6 @@
     margin-bottom: 5px;
 }
 
-@media screen and (max-width: 1200px)  {
-    #contact_main_div{
-        padding-left: 50px;
-        padding-right: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .demopadding {
-        display: flex;
-        flex-direction: row;
-        width: 60%;
-    }
-
-    #contact_first_div{
-        width: 70%;
-        text-align: center;
-        margin: 0;
-    }
-    #contact_second_div{
-        /*!*width: 30%;*!*/
-        /*padding-left: 10%;*/
-        /*padding-right: 10%;*/
-    }
-
-    #contact_third_div{
-        /*width: 70%;*/
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
 
 #name, #email, #contact_no,#msg{
     background-color: #4f5050;
@@ -206,4 +169,58 @@
     justify-content: center;
 }
 
+#map{
+    opacity: 50%;
+    background-color: grey;
+}
 
+
+
+@media screen and (max-width: 1200px)  {
+    #contact_main_div{
+        margin-left: 10vw ;
+        margin-right: 10vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .demopadding {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+    }
+
+    #contact_first_div{
+        width: 70%;
+        text-align: center;
+        margin: 0;
+    }
+    #contact_second_div{
+        /*!*width: 30%;*!*/
+        /*padding-left: 10%;*/
+        /*padding-right: 10%;*/
+    }
+
+    #contact_third_div{
+        /*width: 70%;*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .p-contact{
+        font-size: 20px;
+    }
+
+    #contact_first_div h3{
+        width: 100%;
+        font-size: 30px;
+    }
+
+    #contact_main_div{
+        margin-left: 0 ;
+        margin-right: 0;
+    }
+
+
+}

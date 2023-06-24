@@ -146,3 +146,25 @@ ol {
     bottom: 0;
     margin: auto;
 }
+
+#id-education{
+    background-color: #4f5050;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    padding-top: 5vh;
+}
+
+@media screen and (max-width: 720px) {
+    .edu_list{
+        width: 180px;
+        height: 250px;
+    }
+
+    .edu_list .descr{
+        font-size: 15px;
+    }
+
+    .edu_list .title{
+        font-size: 18px;
+    }
+}

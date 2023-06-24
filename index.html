@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <title>Ruvini Rangathara</title>
 
-    <link href="../assets/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="../assets/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="assert/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="assert/fontawesome/css/all.min.css" rel="stylesheet">
     <!--    <link href="assets/normalize.css" rel="stylesheet">-->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--    ==============================   Animation OS    ======================================-->
+    <link href="assert/external_stylesheet/buttons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
     <link href="assert/external_stylesheet/about_me_sec.css" rel="stylesheet">
@@ -83,23 +87,23 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="n">
     <div class="container-fluid">
-        <img src="assert/image/logo_1.png" id="logo">
-        <a href="#" class="navbar-brand">
+        <img alt="" id="logo" src="assert/image/logo_1.png">
+        <a class="navbar-brand" href="#">
             <p id="nav_my_name">Ruvini Rangathara</p>
         </a>
-        <button type="button" class="navbar-toggler" id="hamburger_id" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse" onclick="changeVisibility()">
-            <span id="hamburger" class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" id="hamburger_id"
+                onclick="changeVisibility()" type="button">
+            <span class="navbar-toggler-icon" id="hamburger"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav" id="nav-bar">
-                <a href="#about_me_sec" class="nav-item nav-link active" id="about-me-link">&nbsp;About Me</a>
-                <a href="#id-education" class="nav-item nav-link" id="education-link">&nbsp;Education</a>
-                <a href="#exper_skill_id" class="nav-item nav-link" id="skills-link">&nbsp;Skills</a>
-                <a href="#project-id" class="nav-item nav-link" id="projects-link">&nbsp;Projects</a>
-                <a href="#gallery-id" class="nav-item nav-link" id="gallery-link">&nbsp;Gallery</a>
-                <a href="#contactMe-id" class="nav-item nav-link" id="contact-me-link">&nbsp;Contact Me</a>
+                <a class="nav-item nav-link active" href="#about_me_sec" id="about-me-link">&nbsp;About Me</a>
+                <a class="nav-item nav-link" href="#id-education" id="education-link">&nbsp;Education</a>
+                <a class="nav-item nav-link" href="#exper_skill_id" id="skills-link">&nbsp;Skills</a>
+                <a class="nav-item nav-link" href="#project-id" id="projects-link">&nbsp;Projects</a>
+                <a class="nav-item nav-link" href="#gallery-id" id="gallery-link">&nbsp;Gallery</a>
+                <a class="nav-item nav-link" href="#contactMe-id" id="contact-me-link">&nbsp;Contact Me</a>
                 <!--          <a href="#" class="nav-item nav-link disabled" tabindex="-1">Reports</a>-->
             </div>
         </div>
@@ -118,7 +122,7 @@
 <section id="about_me_sec">
     <div id="about_me_para_div">
         <h1 id="my_name">Ruvini Rangathara</h1>
-<!--        <p id="my_position">Full-Stack developer Web Developer</p>-->
+        <!--        <p id="my_position">Full-Stack developer Web Developer</p>-->
         <br>
         <p id="about_me_para">Hello, I’m Ruvini Rangathara. I’m 23 years old
             young and highly active enthusiast. I’m a developer
@@ -131,60 +135,53 @@
             coding and software development.</p>
 
         <div class="vn-red" style="text-align: center;">
-            <a href="assert/pdf/PRF Interview Questions.pdf" download id="cv_btn">DOWNLOAD CV</a>
+            <a download href="assert/pdf/PRF Interview Questions.pdf" id="cv_btn">DOWNLOAD CV</a>
         </div>
         <br>
 
     </div>
     <div id="about_pic_div">
-        <img src="assert/image/myPic.png" id="about_me_pic">
+        <img src="assert/image/my_pic_new.png" id="about_me_pic"  alt="">
     </div>
 </section>
 
 
-
-
-
-
-
-
-
-
 <br><br>
 <hr>
+<br>
 
+<div class="section_head" style="padding-top: 0">Education</div>
 <section id="id-education">
-    <div class="section_head" style="padding-top: 0">Education</div>
 
     <h3>Life Long Learning</h3>
     <br>
     <ol>
-        <li style="--accent-color:#989898" class="edu_list">
-            <div class="icon"><img src="assert/image/icons8-graduation-cap-50.png"></div>
+        <li class="edu_list" style="--accent-color:#989898">
+            <div class="icon"><img alt="" src="assert/image/icons8-graduation-cap-50.png"></div>
             <div class="title">IJSE</div>
             <div class="descr">BSc (Hons) In Computer Science
                 Institute Of Software Engineering
                 Panadura.
             </div>
         </li>
-        <li style="--accent-color:#808080" class="edu_list">
-            <div class="icon"><img src="assert/image/icons8-graduation-cap-50.png"></div>
+        <li class="edu_list" style="--accent-color:#808080">
+            <div class="icon"><img alt="" src="assert/image/icons8-graduation-cap-50.png"></div>
             <div class="title">UOJ</div>
             <div class="descr"><p>University Of Sri Jayewardenepura</p>2022 - Physical Sciences Selected.</div>
         </li>
-        <li style="--accent-color:#757575" class="edu_list">
-            <div class="icon"><img src="assert/image/icons8-graduation-cap-50.png"></div>
+        <li class="edu_list" style="--accent-color:#757575">
+            <div class="icon"><img alt="" src="assert/image/icons8-graduation-cap-50.png"></div>
             <div class="title">Advanced Level</div>
             <div class="descr">2019 O/L - Maths Stream <p>Taxila Central College Horana.</p></div>
         </li>
-        <li style="--accent-color:#555555" class="edu_list">
-            <div class="icon"><img src="assert/image/icons8-graduation-cap-50.png"></div>
+        <li class="edu_list" style="--accent-color:#555555">
+            <div class="icon"><img alt="" src="assert/image/icons8-graduation-cap-50.png"></div>
             <div class="title">Ordinary Level</div>
             <div class="descr">2016 O/L - Sinhala Medium <p>Agamethi Balika Maha Vidyalaya
                 Panadura.</p></div>
         </li>
-        <li style="--accent-color:#353839" class="edu_list">
-            <div class="icon"><img src="assert/image/icons8-graduation-cap-50.png"></div>
+        <li class="edu_list" style="--accent-color:#353839">
+            <div class="icon"><img alt="" src="assert/image/icons8-graduation-cap-50.png"></div>
             <div class="title">Primary Education</div>
             <div class="descr">Grade 5 scholarship - K / Mahavila
                 Vidyalaya Panadura.
@@ -204,7 +201,7 @@
 <section>
     <div class="section_head" id="exper_skill_id" style="padding-top: 0">Experiences & Skills</div>
 
-<!--=========================   Experience Section    ======================================-->
+    <!--=========================   Experience Section    ======================================-->
     <h1 id="experience_h1">Experiences</h1>
 
     <div class="experience_container">
@@ -230,7 +227,7 @@
         <div class="timeline1-block timeline1-block-right">
             <div class="marker"></div>
             <div class="timeline1-content">
-                <h3>Member Of Student Committee</h3>
+                <h3>Member Of Student<br>Committee</h3>
                 <span>December 2022 - Now</span>
                 <p>At Institute Of Software Engineering.</p>
             </div>
@@ -256,26 +253,24 @@
     </div>
 
 
-
-
     <br>
 </section>
 
 <div class="wrapper1">
     <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
-        <li><img class="skills_icon" src="assert/image/skill_icon/icons8-java.svg"></li>
-        <li><img class="skills_icon" src="assert/image/skill_icon/icons8-mysql.svg"></li>
-        <li><img class="skills_icon" src="assert/image/skill_icon/icons8-intellij-idea.svg"></li>
-        <li><img class="skills_icon" src="assert/image/skill_icon/icons8-github.svg"></li>
-        <li><img class="skills_icon" src="assert/image/skill_icon/icons8-html5.svg"></li>
-        <li><img class="skills_icon" src="assert/image/skill_icon/icons8-css.svg"></li>
-        <li><img class="skills_icon" src="assert/image/skill_icon/javascript-1.svg"></li>
-        <li><img class="skills_icon" src="assert/image/skill_icon/icons8-java.svg"></li>
-        <li><img class="skills_icon" src="assert/image/skill_icon/hibernate.png"></li>
-        <li><img class="skills_icon" src="assert/image/skill_icon/icons8-vs-code.svg"></li>
-        <li><img class="skills_icon" src="assert/image/skill_icon/icons8-scene-builder.svg"></li>
-        <li><img class="skills_icon" src="assert/image/skill_icon/icons8-figma.svg"></li>
-        <li><img class="skills_icon" src="assert/image/skill_icon/icons8-medium.svg"></li>
+        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-java.svg"></li>
+        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-mysql.svg"></li>
+        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-intellij-idea.svg"></li>
+        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-github.svg"></li>
+        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-html5.svg"></li>
+        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-css.svg"></li>
+        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/javascript-1.svg"></li>
+        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-java.svg"></li>
+        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/hibernate.png"></li>
+        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-vs-code.svg"></li>
+        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-scene-builder.svg"></li>
+        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-figma.svg"></li>
+        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-medium.svg"></li>
     </ul>
 </div>
 <br>
@@ -303,11 +298,11 @@
                         <span>Successfully completed the course by
                             demonstrating theoretical and practical
                             understanding of Java  -  Sololearn</span>
-<!--                    <i class="fa fa-folder-o"></i>-->
+                    <!--                    <i class="fa fa-folder-o"></i>-->
                 </div>
                 <div class="card__expander">
                     <i class="fa fa-close [ js-collapser ]"></i>
-                    <img src="assert/image/sololearn_java.png" class="expander_img">
+                    <img alt="" class="expander_img" src="assert/image/sololearn_java.png">
                 </div>
             </div>
 
@@ -316,11 +311,11 @@
                         <span>Successfully completed the course by
                             demonstrating theoretical and practical
                             understanding of SQL  -  Sololearn </span>
-<!--                    <i class="fa fa-folder-o"></i>-->
+                    <!--                    <i class="fa fa-folder-o"></i>-->
                 </div>
                 <div class="card__expander">
                     <i class="fa fa-close [ js-collapser ]"></i>
-                    <img src="assert/image/sololearn_sql.png" class="expander_img">
+                    <img alt="" class="expander_img" src="assert/image/sololearn_sql.png">
                 </div>
             </div>
 
@@ -329,11 +324,11 @@
                         <span>Successfully completed the course by
                             demonstrating theoretical and practical
                             understanding of Introduction To HTML  -  Sololearn </span>
-<!--                    <i class="fa fa-folder-o"></i>-->
+                    <!--                    <i class="fa fa-folder-o"></i>-->
                 </div>
                 <div class="card__expander">
                     <i class="fa fa-close [ js-collapser ]"></i>
-                    <img src="assert/image/sololearn_introduction_to_html.png" class="expander_img">
+                    <img alt="" class="expander_img" src="assert/image/sololearn_introduction_to_html.png">
                 </div>
             </div>
 
@@ -342,11 +337,11 @@
                         <span>Successfully completed the course by
                             demonstrating theoretical and practical
                             understanding of Introduction To CSS  -  Sololearn</span>
-<!--                    <i class="fa fa-folder-o"></i>-->
+                    <!--                    <i class="fa fa-folder-o"></i>-->
                 </div>
                 <div class="card__expander">
                     <i class="fa fa-close [ js-collapser ]"></i>
-                    <img src="assert/image/sololearn_introduction_to_css.png" class="expander_img">
+                    <img alt="" class="expander_img" src="assert/image/sololearn_introduction_to_css.png">
                 </div>
             </div>
 
@@ -355,11 +350,11 @@
                         <span>Successfully completed the course by
                             demonstrating theoretical and practical
                             understanding of Introduction To JavaScript  -  Sololearn</span>
-<!--                    <i class="fa fa-folder-o"></i>-->
+                    <!--                    <i class="fa fa-folder-o"></i>-->
                 </div>
                 <div class="card__expander">
                     <i class="fa fa-close [ js-collapser ]"></i>
-                    <img src="assert/image/sololearn_introduction_to_js.png" class="expander_img">
+                    <img class="expander_img" src="assert/image/sololearn_introduction_to_js.png">
                 </div>
             </div>
 
@@ -368,11 +363,11 @@
                         <span>Successfully completed the course by
                             demonstrating theoretical and practical
                             understanding of Web Development Fundamental  -  Sololearn</span>
-<!--                    <i class="fa fa-folder-o"></i>-->
+                    <!--                    <i class="fa fa-folder-o"></i>-->
                 </div>
                 <div class="card__expander">
                     <i class="fa fa-close [ js-collapser ]"></i>
-                    <img src="assert/image/sololearn_web_development_fundamental.png" class="expander_img">
+                    <img class="expander_img" src="assert/image/sololearn_web_development_fundamental.png">
                 </div>
             </div>
 
@@ -381,11 +376,11 @@
                         <span>Successfully completed the course by
                             demonstrating theoretical and practical
                             understanding of Java Intermediate -  Sololearn</span>
-<!--                    <i class="fa fa-folder-o"></i>-->
+                    <!--                    <i class="fa fa-folder-o"></i>-->
                 </div>
                 <div class="card__expander">
                     <i class="fa fa-close [ js-collapser ]"></i>
-                    <img src="assert/image/sololearn_java_intermediate.png" class="expander_img">
+                    <img alt="" class="expander_img" src="assert/image/sololearn_java_intermediate.png">
                 </div>
             </div>
 
@@ -394,18 +389,18 @@
                         <span>Successfully completed the course by
                             demonstrating theoretical and practical
                             understanding of SQL Intermediate  -  Sololearn</span>
-<!--                    <i class="fa fa-folder-o"></i>-->
+                    <!--                    <i class="fa fa-folder-o"></i>-->
                 </div>
                 <div class="card__expander">
                     <i class="fa fa-close [ js-collapser ]"></i>
-                    <img src="assert/image/sololearn_sql_intermediate.png" class="expander_img">
+                    <img alt="" class="expander_img" src="assert/image/sololearn_sql_intermediate.png">
                 </div>
             </div>
 
             <div class=" card [ is-collapsed ] ">
                 <div class="card__inner [ js-expander ]">
                     <span>Card</span>
-<!--                    <i class="fa fa-folder-o"></i>-->
+                    <!--                    <i class="fa fa-folder-o"></i>-->
                 </div>
                 <div class="card__expander">
                     <i class="fa fa-close [ js-collapser ]"></i>
@@ -444,11 +439,10 @@
                     Connectivity.
                     <p>( Institute Of Software Engineering - IJSE )</p>
 
-                    </p>
                     <p>GitHub Link : <a
                             href="https://github.com/Ruvini-Rangathara/Hotel-Room-Reservation-Management-System.git">See
                         here</a></p>
-                    <img src="assert/image/blue-ocean-project.png" alt="Graphic">
+                    <img alt="Graphic" src="assert/image/blue-ocean-project.png">
                 </div>
             </div>
 
@@ -468,14 +462,13 @@
                     <!--                        <p>-->
                     <!--                            ( Institute Of Software Engineering - IJSE )-->
                     <!--                        </p>-->
-                    </p>
                     <p>GitHub Link : <a href="https://github.com/Ruvini-Rangathara/Tuition-Class-Management-System.git">See
                         here</a>
                         <br>
                         UI Designs : <a
                                 href="https://drive.google.com/drive/folders/1zv7gs3sz6oz1NNmWf7Mc6dlgOBhDbNBP?usp=drive_link">See
                             here</a></p>
-                    <img src="assert/image/tcms2.png" alt="Graphic">
+                    <img alt="Graphic" src="assert/image/tcms2.png">
                 </div>
             </div>
 
@@ -497,10 +490,9 @@
                         ( Institute Of Software Engineering - IJSE )
                     </p>
 
-                    </p>
                     <p>GitHub Link : <a href="https://github.com/Ruvini-Rangathara/1st-Layered-Project.git">See here</a>
                     </p>
-                    <img src="assert/image/tcms1.png" alt="Graphic">
+                    <img alt="Graphic" src="assert/image/tcms1.png">
                 </div>
             </div>
 
@@ -521,12 +513,12 @@
                         ( Institute Of Software Engineering - IJSE )
                     </p>
 
-                    </p>
+
                     <p>GitHub Link : <a
                             href="https://github.com/Ruvini-Rangathara/Hotel-Room-Reservation-Management-System.git">See
                         here</a></p>
 
-                    <img src="assert/image/Hostel.png" alt="Graphic">
+                    <img alt="Graphic" src="assert/image/Hostel.png">
                 </div>
             </div>
 
@@ -547,13 +539,11 @@
                     <p>
                         ( Institute Of Software Engineering - IJSE )
                     </p>
-
-                    </p>
                     <p>GitHub Link : <a href="https://github.com/Ruvini-Rangathara/Chat-Application.git">See here</a>
                     </p>
 
 
-                    <img src="assert/image/chatApp2.png" alt="Graphic">
+                    <img alt="Graphic" src="assert/image/chatApp2.png">
                 </div>
             </div>
 
@@ -567,7 +557,7 @@
                 <div class="body">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus
                         consequatur, laudantium odio dolorum laboriosam.</p>
-                    <img src="http://placehold.it/1000x500" alt="Graphic">
+                    <img alt="Graphic" src="http://placehold.it/1000x500">
                 </div>
             </div>
 
@@ -699,7 +689,8 @@
             <p class="copy">Animation</p>
             <a class="btn"
                href="assignment/CSS12 - Animation/index.html"
-               target="_blank">View</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                    </View></button>
+               target="_blank">View</a>
+<!--            </View></button>-->
         </div>
     </div>
 
@@ -713,69 +704,69 @@
 <br>
 <!--    gallery section-->
 
-    <section>
+<section>
 
-        <div class="section_head" id="gallery-id" style="padding-top: 0">Gallery</div>
+    <div class="section_head" id="gallery-id" style="padding-top: 0">Gallery</div>
 
-        <h1 id="my_gallery">My Gallery</h1>
+    <h1 id="my_gallery">My Gallery</h1>
 
-        <section id="gallery">
-            <!--    <div class="message">-->
-            <!--        Sorry, your browser does not support CSS Grid. 😅-->
-            <!--    </div>-->
-            <section class="section1">
-                <div class="grid">
+    <section id="gallery">
+        <!--    <div class="message">-->
+        <!--        Sorry, your browser does not support CSS Grid. 😅-->
+        <!--    </div>-->
+        <section class="section1">
+            <div class="grid">
 
-                    <!--            1-->
-                    <div class="item" style="background-image: url('assert/image/gallery01.jpeg');">
-                        <div class="item__details">
-                            jelly-o brownie sweet
-                        </div>
+                <!--            1-->
+                <div class="item" style="background-image: url('assert/image/gallery01.jpeg');">
+                    <div class="item__details">
+                        jelly-o brownie sweet
                     </div>
-
-                    <!--            2-->
-                    <div class="item item--large" style="background-image: url('assert/image/gallery05.jpeg');">
-                        <div class="item__details">
-                            Muffin jelly gingerbread
-                        </div>
-                    </div>
-
-                    <!--            3-->
-                    <div class="item item--medium" style="background-image: url('assert/image/gallery01.jpeg');">
-                        <div class="item__details">
-                            sesame snaps chocolate
-                        </div>
-                    </div>
-
-                    <!--            4-->
-                    <div class="item item--large" style="background-image: url('assert/image/gallery05.jpeg');">
-                        <div class="item__details">
-                            Oat cake
-                        </div>
-                    </div>
-
-                    <!--            6-->
-                    <div class="item item--medium" style="background-image: url('assert/image/gallery01.jpeg');">
-                        <div class="item__details">
-                            Dragée pudding brownie
-                        </div>
-                    </div>
-
-
-                    <!--            8-->
-                    <div class="item" style="background-image: url('assert/image/gallery01.jpeg');">
-                        <div class="item__details">
-                            powder toffee
-                        </div>
-                    </div>
-
-
                 </div>
-            </section>
+
+                <!--            2-->
+                <div class="item item--large" style="background-image: url('assert/image/my_pic_3.png');">
+                    <div class="item__details">
+                        Muffin jelly gingerbread
+                    </div>
+                </div>
+
+                <!--            3-->
+                <div class="item item--medium" style="background-image: url('assert/image/my_pic_2.jpeg');">
+                    <div class="item__details">
+                        sesame snaps chocolate
+                    </div>
+                </div>
+
+                <!--            4-->
+                <div class="item item--large" style="background-image: url('assert/image/gallery05.jpeg');">
+                    <div class="item__details">
+                        Oat cake
+                    </div>
+                </div>
+
+                <!--            6-->
+                <div class="item item--medium" style="background-image: url('assert/image/my_pic_4.png');">
+                    <div class="item__details">
+                        Dragée pudding brownie
+                    </div>
+                </div>
+
+
+                <!--            8-->
+                <div class="item" style="background-image: url('assert/image/gallery01.jpeg');">
+                    <div class="item__details">
+                        powder toffee
+                    </div>
+                </div>
+
+
+            </div>
         </section>
-
-
     </section>
+
+
+</section>
 <br>
 
 <hr>
@@ -792,7 +783,8 @@
             <p class="p-contact">Feel free to get in touch with me.
                 I am always open to discussing new projects,
                 creative ideas or opportunities to be part of your vision.
-                <img class="emoji" src="https://raw.githubusercontent.com/twitter/twemoji/gh-pages/36x36/1f609.png"/>
+                <img alt="" class="emoji"
+                     src="https://raw.githubusercontent.com/twitter/twemoji/gh-pages/36x36/1f609.png"/>
             </p>
 
             <br>
@@ -800,11 +792,16 @@
             <br>
             <p id="contact_info_p">
                 <i class="fa fa-user"></i>
-                &nbsp;&nbsp; S.A. Ruvini Rangathara<br>
+                &nbsp;&nbsp; <span
+                    href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.1337510981917!2d79.93652331839829!3d6.709118472162058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae248913b6ffddd%3A0x73b2e88c4294184f!2sMahavila%2C%20Panadura!5e0!3m2!1sen!2slk!4v1687585119948!5m2!1sen!2slk">S.A. Ruvini Rangathara</span><br>
                 <i class="fa fa-envelope"></i>&nbsp;&nbsp;ruvinisubhasinghe200009@gmail.com<br>
                 <i class="fa fa-phone"></i>&nbsp;&nbsp;+94786628489<br>
                 <i class="fa fa-map-marker"></i>&nbsp;&nbsp;No : 48, Miriswaththa, Mahavila, Panadura</p>
 
+            <!--            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.1337510981917!2d79.93652331839829!3d6.709118472162058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae248913b6ffddd%3A0x73b2e88c4294184f!2sMahavila%2C%20Panadura!5e0!3m2!1sen!2slk!4v1687585119948!5m2!1sen!2slk"-->
+            <!--                    style="border:0;"-->
+            <!--                    allowfullscreen="" loading="lazy"-->
+            <!--                    referrerpolicy="no-referrer-when-downgrade"></iframe>-->
 
         </div>
         <div id="contact_second_div">
@@ -813,20 +810,20 @@
                 <br>
 
                 <!--                    <fieldset>-->
-                <div class="input-group" >
-                    <input type="text" name="such" id="name" placeholder="Name"/>
+                <div class="input-group">
+                    <input id="name" name="such" placeholder="Name" type="text"/>
                 </div>
                 <br>
                 <div class="input-group">
-                    <input type="text" name="many" id="email" placeholder="Email"/>
+                    <input id="email" name="many" placeholder="Email" type="text"/>
                 </div>
                 <br>
                 <div class="input-group" data-group-name="very">
-                    <input type="text" name="very" id="contact_no" placeholder="Contact No"/>
+                    <input id="contact_no" name="very" placeholder="Contact No" type="text"/>
                 </div>
                 <br>
                 <div class="input-group">
-                    <textarea name="txt" id="msg" placeholder="Enter Message Here"></textarea>
+                    <textarea id="msg" name="txt" placeholder="Enter Message Here"></textarea>
                 </div>
                 <br>
                 <div class="btn_input-group">
@@ -861,7 +858,7 @@
 </section>
 
 
-<script src="../assert/jquery-3.7.0.min.js"></script>
+<script src="assert/jquery-3.7.0.min.js"></script>
 <script>
     var $cell = $(".card");
 
@@ -973,5 +970,12 @@
 
     textEffect("fly-in-out");
 </script>
+
+<!--==============================    Animation OS   ============================-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
 </body>
 </html>

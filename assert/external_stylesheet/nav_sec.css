@@ -16,7 +16,7 @@
 
 
 #nav_my_name{
-    font-size: 10px;
+    font-size: 15px;
     margin-bottom: 0;
     color: white;
     margin-right: 80px;
@@ -24,8 +24,8 @@
 
 #hamburger_id{
     border: 0px;
-    width: 28px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     padding: 0;
 }
 
@@ -38,8 +38,8 @@
 }
 
 #logo {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
 }
 
 .container-fluid{
