@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I’m Ruvini Rangathara. I’m 23 years old
+            young and highly active enthusiast. I’m a developer
+            living in Panadura, Sri Lanka. I’m currently studying
+            in Institute Software Engineering (IJSE) and also I’m
+            working at IJSE as a trainee instructor.
+            My interests are in Back End Engineering.
+            I have a good knowledge of Java.">
+    <meta name="keywords" content="Ruvini Rangathara, portfolio, website, light theme website">
+    <meta name="author" content="Ruvini Rangathara">
     <title>Ruvini Rangathara</title>
 
     <link href="assert/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -31,6 +41,7 @@
     <link href="assert/external_stylesheet/buttons.css" rel="stylesheet">
 
     <style>
+
 
         body {
             /*background-color: #2a2727;*/
@@ -80,21 +91,57 @@
             opacity: 60%;
         }
 
+        .container-fluid{
+            /*padding: 0;*/
+        }
+
+        @media all and (max-width: 720px) {
+            .section_head{
+                font-size: 30px;
+            }
+
+
+            #my_name{
+                word-spacing: 1px;
+                font-size: 18px;
+            }
+
+            #n{
+                width: 100%;
+            }
+
+            .navbar{
+                width: 300px;
+            }
+        }
+
+        @media all and (max-width: 375px) {
+            #n{
+                width: 374px;
+                left: 0;!important;
+                margin: auto;
+            }
+
+        }
+
+
     </style>
 </head>
 <body>
 
 
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="n">
     <div class="container-fluid">
-        <img alt="" id="logo" src="assert/image/logo_1.png">
-        <a class="navbar-brand" href="#">
-            <p id="nav_my_name">Ruvini Rangathara</p>
-        </a>
         <button class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" id="hamburger_id"
                 onclick="changeVisibility()" type="button">
             <span class="navbar-toggler-icon" id="hamburger"></span>
         </button>
+<!--        <img alt="" id="logo" src="assert/image/logo_1.png">-->
+        <a class="navbar-brand" href="#">
+            <p id="nav_my_name">Ruvini Rangathara</p>
+        </a>
+
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav" id="nav-bar">
@@ -112,8 +159,8 @@
 
 
 <section class="bg-1 text-center">
-    <p class="my_name"> Ruvini Rangathara </p><br>
-    <p id="my_position">Full-Stack developer | Web Developer</p>
+    <p class="my_name" data-aos="fade-down"> Ruvini Rangathara </p><br>
+    <p id="my_position" data-aos="fade-up">Full-Stack developer | Web Developer</p>
 </section>
 <br><br>
 <br><br>
@@ -124,7 +171,7 @@
         <h1 id="my_name">Ruvini Rangathara</h1>
         <!--        <p id="my_position">Full-Stack developer Web Developer</p>-->
         <br>
-        <p id="about_me_para">Hello, I’m Ruvini Rangathara. I’m 23 years old
+        <p id="about_me_para" data-aos="fade-left">Hello, I’m Ruvini Rangathara. I’m 23 years old
             young and highly active enthusiast. I’m a developer
             living in Panadura, Sri Lanka. I’m currently studying
             in Institute Software Engineering (IJSE) and also I’m
@@ -150,13 +197,16 @@
 <hr>
 <br>
 
+
+<!--======================= education   ======================-->
+
 <div class="section_head" style="padding-top: 0">Education</div>
 <section id="id-education">
 
     <h3>Life Long Learning</h3>
     <br>
     <ol>
-        <li class="edu_list" style="--accent-color:#989898">
+        <li class="edu_list" style="--accent-color:#989898" data-aos="fade-right">
             <div class="icon"><img alt="" src="assert/image/icons8-graduation-cap-50.png"></div>
             <div class="title">IJSE</div>
             <div class="descr">BSc (Hons) In Computer Science
@@ -164,23 +214,23 @@
                 Panadura.
             </div>
         </li>
-        <li class="edu_list" style="--accent-color:#808080">
+        <li class="edu_list" style="--accent-color:#808080" data-aos="fade-right" >
             <div class="icon"><img alt="" src="assert/image/icons8-graduation-cap-50.png"></div>
             <div class="title">UOJ</div>
             <div class="descr"><p>University Of Sri Jayewardenepura</p>2022 - Physical Sciences Selected.</div>
         </li>
-        <li class="edu_list" style="--accent-color:#757575">
+        <li class="edu_list" style="--accent-color:#757575" data-aos="fade-right" >
             <div class="icon"><img alt="" src="assert/image/icons8-graduation-cap-50.png"></div>
             <div class="title">Advanced Level</div>
             <div class="descr">2019 O/L - Maths Stream <p>Taxila Central College Horana.</p></div>
         </li>
-        <li class="edu_list" style="--accent-color:#555555">
+        <li class="edu_list" style="--accent-color:#555555" data-aos="fade-right" >
             <div class="icon"><img alt="" src="assert/image/icons8-graduation-cap-50.png"></div>
             <div class="title">Ordinary Level</div>
             <div class="descr">2016 O/L - Sinhala Medium <p>Agamethi Balika Maha Vidyalaya
                 Panadura.</p></div>
         </li>
-        <li class="edu_list" style="--accent-color:#353839">
+        <li class="edu_list" style="--accent-color:#353839" data-aos="fade-right">
             <div class="icon"><img alt="" src="assert/image/icons8-graduation-cap-50.png"></div>
             <div class="title">Primary Education</div>
             <div class="descr">Grade 5 scholarship - K / Mahavila
@@ -206,7 +256,7 @@
 
     <div class="experience_container">
 
-        <div class="timeline1-block timeline1-block-right">
+        <div class="timeline1-block timeline1-block-right" data-aos="fade-left">
             <div class="marker"></div>
             <div class="timeline1-content">
                 <h3>Trainee Instructor</h3>
@@ -215,7 +265,7 @@
             </div>
         </div>
 
-        <div class="timeline1-block timeline1-block-left">
+        <div class="timeline1-block timeline1-block-left" data-aos="fade-right">
             <div class="marker"></div>
             <div class="timeline1-content">
                 <h3>Tutoring</h3>
@@ -224,7 +274,7 @@
             </div>
         </div>
 
-        <div class="timeline1-block timeline1-block-right">
+        <div class="timeline1-block timeline1-block-right" data-aos="fade-left">
             <div class="marker"></div>
             <div class="timeline1-content">
                 <h3>Member Of Student<br>Committee</h3>
@@ -233,7 +283,7 @@
             </div>
         </div>
 
-        <div class="timeline1-block timeline1-block-left">
+        <div class="timeline1-block timeline1-block-left" data-aos="fade-right">
             <div class="marker"></div>
             <div class="timeline1-content">
                 <h3>Event Planning</h3>
@@ -258,19 +308,19 @@
 
 <div class="wrapper1">
     <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
-        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-java.svg"></li>
-        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-mysql.svg"></li>
-        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-intellij-idea.svg"></li>
-        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-github.svg"></li>
-        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-html5.svg"></li>
-        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-css.svg"></li>
-        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/javascript-1.svg"></li>
-        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-java.svg"></li>
-        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/hibernate.png"></li>
-        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-vs-code.svg"></li>
-        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-scene-builder.svg"></li>
-        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-figma.svg"></li>
-        <li><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-medium.svg"></li>
+        <li data-aos="flip-left"><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-java.svg"></li>
+        <li data-aos="flip-left"><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-mysql.svg"></li>
+        <li data-aos="flip-left"><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-intellij-idea.svg"></li>
+        <li data-aos="flip-left"><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-github.svg"></li>
+        <li data-aos="flip-left"><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-html5.svg"></li>
+        <li data-aos="flip-left"><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-css.svg"></li>
+        <li data-aos="flip-left"><img alt="" class="skills_icon" src="assert/image/skill_icon/javascript-1.svg"></li>
+        <li data-aos="flip-left"><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-java.svg"></li>
+        <li data-aos="flip-left"><img alt="" class="skills_icon" src="assert/image/skill_icon/hibernate.png"></li>
+        <li data-aos="flip-left"><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-vs-code.svg"></li>
+        <li data-aos="flip-left"><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-scene-builder.svg"></li>
+        <li data-aos="flip-left"><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-figma.svg"></li>
+        <li data-aos="flip-left"><img alt="" class="skills_icon" src="assert/image/skill_icon/icons8-medium.svg"></li>
     </ul>
 </div>
 <br>
@@ -293,7 +343,7 @@
 
         <div class="cards">
 
-            <div class=" card [ is-collapsed ] ">
+            <div class=" card [ is-collapsed ] " data-aos="zoom-in">
                 <div class="card__inner [ js-expander ]">
                         <span>Successfully completed the course by
                             demonstrating theoretical and practical
@@ -306,7 +356,7 @@
                 </div>
             </div>
 
-            <div class=" card [ is-collapsed ] ">
+            <div class=" card [ is-collapsed ] " data-aos="zoom-in">
                 <div class="card__inner [ js-expander ]">
                         <span>Successfully completed the course by
                             demonstrating theoretical and practical
@@ -319,7 +369,7 @@
                 </div>
             </div>
 
-            <div class=" card [ is-collapsed ] ">
+            <div class=" card [ is-collapsed ] " data-aos="zoom-in">
                 <div class="card__inner [ js-expander ]">
                         <span>Successfully completed the course by
                             demonstrating theoretical and practical
@@ -332,7 +382,7 @@
                 </div>
             </div>
 
-            <div class=" card [ is-collapsed ] ">
+            <div class=" card [ is-collapsed ] " data-aos="zoom-in">
                 <div class="card__inner [ js-expander ]">
                         <span>Successfully completed the course by
                             demonstrating theoretical and practical
@@ -345,7 +395,7 @@
                 </div>
             </div>
 
-            <div class=" card [ is-collapsed ] ">
+            <div class=" card [ is-collapsed ] " data-aos="zoom-in">
                 <div class="card__inner [ js-expander ]">
                         <span>Successfully completed the course by
                             demonstrating theoretical and practical
@@ -358,7 +408,7 @@
                 </div>
             </div>
 
-            <div class=" card [ is-collapsed ] ">
+            <div class=" card [ is-collapsed ] " data-aos="zoom-in">
                 <div class="card__inner [ js-expander ]">
                         <span>Successfully completed the course by
                             demonstrating theoretical and practical
@@ -371,7 +421,7 @@
                 </div>
             </div>
 
-            <div class=" card [ is-collapsed ] ">
+            <div class=" card [ is-collapsed ] " data-aos="zoom-in">
                 <div class="card__inner [ js-expander ]">
                         <span>Successfully completed the course by
                             demonstrating theoretical and practical
@@ -384,7 +434,7 @@
                 </div>
             </div>
 
-            <div class=" card [ is-collapsed ] ">
+            <div class=" card [ is-collapsed ] " data-aos="zoom-in">
                 <div class="card__inner [ js-expander ]">
                         <span>Successfully completed the course by
                             demonstrating theoretical and practical
@@ -397,7 +447,7 @@
                 </div>
             </div>
 
-            <div class=" card [ is-collapsed ] ">
+            <div class=" card [ is-collapsed ] " data-aos="zoom-in">
                 <div class="card__inner [ js-expander ]">
                     <span>Card</span>
                     <!--                    <i class="fa fa-folder-o"></i>-->
@@ -424,7 +474,7 @@
         <!--    <h1>A Flexbox Timeline</h1>-->
         <!--    <p class="leader">All cards must be the same height and width for space calculations on large screens.</p>-->
         <div class="demo-card-wrapper">
-            <div class="demo-card demo-card--step1">
+            <div class="demo-card demo-card--step1" data-aos="fade-right">
                 <div class="head">
                     <div class="number-box">
                         <span>01</span>
@@ -446,7 +496,7 @@
                 </div>
             </div>
 
-            <div class="demo-card demo-card--step2">
+            <div class="demo-card demo-card--step2" data-aos="fade-left">
                 <div class="head">
                     <div class="number-box">
                         <span>02</span>
@@ -472,7 +522,7 @@
                 </div>
             </div>
 
-            <div class="demo-card demo-card--step3">
+            <div class="demo-card demo-card--step3" data-aos="fade-right">
                 <div class="head">
                     <div class="number-box">
                         <span>03</span>
@@ -496,7 +546,7 @@
                 </div>
             </div>
 
-            <div class="demo-card demo-card--step4">
+            <div class="demo-card demo-card--step4" data-aos="fade-left">
                 <div class="head">
                     <div class="number-box">
                         <span>04</span>
@@ -522,7 +572,7 @@
                 </div>
             </div>
 
-            <div class="demo-card demo-card--step5">
+            <div class="demo-card demo-card--step5" data-aos="fade-right">
                 <div class="head">
                     <div class="number-box">
                         <span>05</span>
@@ -547,7 +597,7 @@
                 </div>
             </div>
 
-            <div class="demo-card demo-card--step6">
+            <div class="demo-card demo-card--step6" data-aos="fade-left">
                 <div class="head">
                     <div class="number-box">
                         <span>06</span>
@@ -574,7 +624,8 @@
 <h1 id="my_assignment">Assignments</h1>
 <section class="page-content">
 
-    <div class="assignment_card">
+    <div class="assignment_card" data-aos="fade-up"
+         data-aos-duration="2000">
         <div class="content">
             <h2 class="title">Assignment 01</h2>
             <p class="copy">Absolute Position</p>
@@ -583,7 +634,8 @@
                target="_blank">View</a>
         </div>
     </div>
-    <div class="assignment_card">
+    <div class="assignment_card" data-aos="fade-up"
+         data-aos-duration="2000">
         <div class="content">
             <h2 class="title">Assignment 02</h2>
             <p class="copy">Fixed Circles</p>
@@ -592,7 +644,8 @@
                target="_blank">View</a>
         </div>
     </div>
-    <div class="assignment_card">
+    <div class="assignment_card" data-aos="fade-up"
+         data-aos-duration="2000">
         <div class="content">
             <h2 class="title">Assignment 03</h2>
             <p class="copy">Sticky Cards</p>
@@ -601,7 +654,8 @@
                target="_blank">View</a>
         </div>
     </div>
-    <div class="assignment_card">
+    <div class="assignment_card" data-aos="fade-up"
+         data-aos-duration="2000">
         <div class="content">
             <h2 class="title">Assignment 04</h2>
             <p class="copy">Responsive Web Site Sample</p>
@@ -613,7 +667,8 @@
 
 
     <!--    -=======================================-->
-    <div class="assignment_card">
+    <div class="assignment_card" data-aos="fade-up"
+         data-aos-duration="2000">
         <div class="content">
             <h2 class="title">Assignment 05</h2>
             <p class="copy">Grid Layout</p>
@@ -623,7 +678,8 @@
         </div>
     </div>
 
-    <div class="assignment_card">
+    <div class="assignment_card" data-aos="fade-up"
+         data-aos-duration="2000">
         <div class="content">
             <h2 class="title">Assignment 06</h2>
             <p class="copy">Water Drop</p>
@@ -633,7 +689,8 @@
         </div>
     </div>
 
-    <div class="assignment_card">
+    <div class="assignment_card" data-aos="fade-up"
+         data-aos-duration="2000">
         <div class="content">
             <h2 class="title">Assignment 07</h2>
             <p class="copy">Image Slide Show</p>
@@ -643,7 +700,8 @@
         </div>
     </div>
 
-    <div class="assignment_card">
+    <div class="assignment_card" data-aos="fade-up"
+         data-aos-duration="2000">
         <div class="content">
             <h2 class="title">Assignment 08</h2>
             <p class="copy">Car Animation</p>
@@ -653,7 +711,8 @@
         </div>
     </div>
 
-    <div class="assignment_card">
+    <div class="assignment_card" data-aos="fade-up"
+         data-aos-duration="2000">
         <div class="content">
             <h2 class="title">Assignment 09</h2>
             <p class="copy">Circle Transmission</p>
@@ -663,7 +722,8 @@
         </div>
     </div>
 
-    <div class="assignment_card">
+    <div class="assignment_card" data-aos="fade-up"
+         data-aos-duration="2000">
         <div class="content">
             <h2 class="title">Assignment 10</h2>
             <p class="copy">Calculator</p>
@@ -673,7 +733,8 @@
         </div>
     </div>
 
-    <div class="assignment_card">
+    <div class="assignment_card" data-aos="fade-up"
+         data-aos-duration="2000">
         <div class="content">
             <h2 class="title">Assignment 11</h2>
             <p class="copy">Knight Rider</p>
@@ -683,7 +744,8 @@
         </div>
     </div>
 
-    <div class="assignment_card">
+    <div class="assignment_card" data-aos="fade-up"
+         data-aos-duration="2000">
         <div class="content">
             <h2 class="title">Assignment 12</h2>
             <p class="copy">Animation</p>
@@ -718,35 +780,35 @@
             <div class="grid">
 
                 <!--            1-->
-                <div class="item" style="background-image: url('assert/image/gallery01.jpeg');">
+                <div class="item" style="background-image: url('assert/image/gallery01.jpeg');" data-aos="zoom-in">
                     <div class="item__details">
                         jelly-o brownie sweet
                     </div>
                 </div>
 
                 <!--            2-->
-                <div class="item item--large" style="background-image: url('assert/image/my_pic_3.png');">
+                <div class="item item--large" style="background-image: url('assert/image/my_pic_3.png');" data-aos="zoom-in">
                     <div class="item__details">
                         Muffin jelly gingerbread
                     </div>
                 </div>
 
                 <!--            3-->
-                <div class="item item--medium" style="background-image: url('assert/image/my_pic_2.jpeg');">
+                <div class="item item--medium" style="background-image: url('assert/image/my_pic_2.jpeg');" data-aos="zoom-in">
                     <div class="item__details">
                         sesame snaps chocolate
                     </div>
                 </div>
 
                 <!--            4-->
-                <div class="item item--large" style="background-image: url('assert/image/gallery05.jpeg');">
+                <div class="item item--large" style="background-image: url('assert/image/gallery05.jpeg');" data-aos="zoom-in">
                     <div class="item__details">
                         Oat cake
                     </div>
                 </div>
 
                 <!--            6-->
-                <div class="item item--medium" style="background-image: url('assert/image/my_pic_4.png');">
+                <div class="item item--medium" style="background-image: url('assert/image/my_pic_4.png');" data-aos="zoom-in">
                     <div class="item__details">
                         Dragée pudding brownie
                     </div>
@@ -754,7 +816,7 @@
 
 
                 <!--            8-->
-                <div class="item" style="background-image: url('assert/image/gallery01.jpeg');">
+                <div class="item" style="background-image: url('assert/image/gallery01.jpeg');" data-aos="zoom-in">
                     <div class="item__details">
                         powder toffee
                     </div>
@@ -976,6 +1038,7 @@
 <script>
     AOS.init();
 </script>
+
 
 </body>
 </html>

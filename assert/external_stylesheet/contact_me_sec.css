@@ -224,3 +224,23 @@
 
 
 }
+
+@media all and (max-width: 720px) {
+    #contact_main_div{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #contact_info_p{
+        font-size: 13px;
+    }
+
+    .nice-form{
+        padding-right: 0;
+        padding-left: 0;
+        width: 70%;
+    }
+
+    #name, #email, #contact_no,#msg{
+        width: 100%;
+    }
+}

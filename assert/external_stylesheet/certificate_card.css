@@ -200,8 +200,8 @@
 
     .card {
         width: calc((100% / 1) - 50px);
-        height: 210px;
-        font-size: 20px;
+        height: 200px;
+        font-size: 17px;
         margin-bottom: 40px;
     }
 }

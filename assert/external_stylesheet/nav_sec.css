@@ -8,7 +8,7 @@
     padding: 0;
     position: fixed;
     width: 100%;
-    z-index: 5;
+    z-index: 1000;
     height: fit-content;
     right: 0;
     top: 0;!important;
@@ -30,7 +30,7 @@
 }
 
 #hamburger_id:hover{
-    border: 0px solid #2a2727;!important;
+    border: none;
 }
 
 #hamburger{
@@ -95,10 +95,10 @@
 @import url("https://fonts.googleapis.com/css?family=Syncopate");
 
 
-html {
-    /* subtlepatterns.com */
-    background: url("http://neilcarpenter.com/demos/asfalt.png") repeat;
-}
+/*html {*/
+/*    !* subtlepatterns.com *!*/
+/*    background: url("http://neilcarpenter.com/demos/asfalt.png") repeat;*/
+/*}*/
 /*body {*/
 /*    background: radial-gradient(*/
 /*            ellipse at center,*/

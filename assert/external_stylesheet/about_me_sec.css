@@ -142,7 +142,7 @@ a:visited {
     display: inline;
     padding: 0px;
 }
-@media screen and (max-width: 720px) {
+@media all and (max-width: 720px) and (min-width: 0) {
     .bg-1 {
         height: 70vh;
         padding-top: 90px;
@@ -153,7 +153,8 @@ a:visited {
     }
 
     #my_name{
-        font-size: 25px;
+        color: black;
+        font-size: 25px;!important;
     }
 
     #my_position{
@@ -170,12 +171,7 @@ a:visited {
 
     #about_me_para_div{
         width: 100%;
-        padding: 10px 30px 0px 30px;
-        /*display: flex;*/
-        /*flex-direction: column;*/
-        /*align-items: center;*/
-        /*justify-content: center;*/
-
+        padding: 10px 30px 0 30px;
     }
 
     #about_me_pic{
@@ -188,4 +184,12 @@ a:visited {
     #about_me_sec{
         padding-top: 10px;
     }
+}
+
+
+@media all and (max-width: 400pX) {
+    #my_name{
+        font-size: 25px;
+    }
+
 }
