@@ -18,7 +18,7 @@
 .header__title {
     margin: 0;
     text-transform: uppercase;
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: 500;
     line-height: 1.1;
 }
@@ -225,4 +225,18 @@
     .card__expander {
         width: calc(300% + 60px);
     }
+}
+
+@media all and (max-width: 720px) {
+    .header__title{
+        font-size: 25px;
+    }
+
+    .wrapper{
+        width: 90vw;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
 }
