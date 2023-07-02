@@ -148,7 +148,8 @@ ol {
 }
 
 #id-education{
-    background-color: #4f5050;
+    /*background-color: #4f5050;*/
+    background-color: transparent;
     margin-right: 10vw;
     margin-left: 10vw;
     padding-top: 5vh;

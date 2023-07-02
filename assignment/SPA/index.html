@@ -1,0 +1,700 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SPA POS System</title>
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="assets/Styles/Stylesheet.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/f7d94b6141.js"></script> <!-- for icon -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body > main > div:nth-child(1) {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            text-align: center;
+            opacity: 0.9;
+            background-color: #000000;
+            z-index: 99;
+        }
+
+
+        body > main > div:nth-child(1) > div {
+            width: 500px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-size: cover;
+            background-position: center;
+            z-index: 100;
+        }
+
+        i:hover {
+            cursor: pointer;
+        }
+
+        .size {
+            width: 350px;
+            height: 300px;
+        }
+    </style>
+
+</head>
+<body>
+<main>
+    <!-- start page loader-->
+    <div id="loader">
+        <div>
+
+        </div>
+    </div>
+    <!-- End page loader-->
+
+
+    <!--  start header -->
+    <header class="mb-3" id="header">
+        <!--start nav bar with image and name-->
+        <nav class="navbar navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+<!--                    <img alt="Logo" class="d-inline-block align-text-top" height="30" src="assets/images/store.png"-->
+<!--                         width="30">-->
+                    POS System
+                </a>
+
+                <!--start nav bar with navigations links(home,customer,item...)-->
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <div class="container-fluid" >
+                        <a class="navbar-brand" href="#"></a>
+                        <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+                                class="navbar-toggler" data-bs-target="#navbarNavAltMarkup"
+                                data-bs-toggle="collapse" type="button">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a aria-current="page" class="nav-link active" href="#" id="home">Home</a>
+                                <a class="nav-link" href="#" id="customer" onclick="generateCustomerID()">Customer</a>
+                                <a class="nav-link" href="#" id="item" onclick="generateItemID()">Item</a>
+                                <a class="nav-link" href="#" id="order" onclick="generateOrderID()">Order</a>
+                                <a class="nav-link" href="#" id="orderDetails" onclick="loadOrderDetailsTable()">Order-Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!--end nav bar with navigations links(home,customer,item...)-->
+
+            </div>
+        </nav>
+        <!--end nav bar with image and name-->
+
+    </header>
+    <!--  end header -->
+    <!----------------------------------------------------------------------------------------------------------------->
+
+
+    <div id="main_container">
+        <section id="dashboard">
+            <!--Dashboard Headline-->
+            <div class="mb-5 ">
+                <h1 class="container-fluid "><span>Dashboard</span></h1>
+            </div>
+
+            <!--start Dashboard-->
+            <main class="container-fluid">
+
+                <section class="row container-fluid justify-content-around mb-3">
+                    <div class="mb-5 col-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-header bg-dark text-white">Customers</div>
+                            <div class="card-body">
+                                <div><i class="fa-solid fa-user"></i></div>
+                            </div>
+                            <div class="card-footer">
+                                <div><h2 id="customersCount">0</h2></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-header bg-dark text-white">Items</div>
+                            <div class="card-body">
+                                <div><i class="fa-solid fa-cubes-stacked"></i></div>
+                            </div>
+                            <div class="card-footer">
+                                <div><h2 id="itemsCount">0</h2></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-header bg-dark text-white">Orders</div>
+                            <div class="card-body">
+                                <div><i class="fa-solid fa-cart-shopping"></i></div>
+                            </div>
+                            <div class="card-footer">
+                                <div><h2 id="ordersCount">0</h2></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                  Customer,Item,Order and Order detail Quick links With image
+                            <section class="container-fluid">
+                                <div class="row mb-1 justify-content-between">
+                                    <div class="size col-lg-4">
+                                        <div class="card">
+                                            <img alt="Customer" class="card-img-top"
+                                                 src="https://img.freepik.com/free-photo/smiling-middle-aged-couple-shopping-carrying-paper-bags-walking-city-street_1262-13021.jpg?w=1800&t=st=1665641416~exp=1665642016~hmac=d089531060e5d7e516b195c3862701ff9d084c1567e6493e3b8582a68a3d50da"/>
+                                            <div class="card-body">
+                                                <a class="btn btn-success btn-rounded" href="#" id="linkCustomer2" type="button">Customer</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="size col-lg-4">
+                                        <div class="card">
+                                            <img alt="Item" class="card-img-top"
+                                                 src="https://img.freepik.com/free-photo/zero-waste-bag-food_23-2149015849.jpg?w=1800&t=st=1665641237~exp=1665641837~hmac=25c69727c31be9ff22a5ca6534588b379e92cc589ad5d54769eda9cd9ada91f4"/>
+                                            <div class="card-body">
+                                                <a class="btn btn-success btn-rounded" href="#" id="linkItem2" type="button">Item</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="size col-lg-4">
+                                        <div class="card">
+                                            <img alt="Order" class="card-img-top"
+                                                 src="https://img.freepik.com/free-photo/import-export-shipment-truck-graphic-concept_53876-124866.jpg?w=1800&t=st=1665639924~exp=1665640524~hmac=054a5f3c8df180ab0ab2e71886ee3496009d9f01f08c80cca912c0f839f5f64e"/>
+                                            <div class="card-body">
+                                                <a class="btn btn-success btn-rounded" href="#" id="linkOrder2" type="button">Order</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="size col-lg-4">
+                                        <div class="card">
+                                            <img alt="OrderDetails" class="card-img-top"
+                                                 src="https://img.freepik.com/free-photo/order-summary-payslip-purchase-order-form-concept_53876-137616.jpg?w=1800&t=st=1665639636~exp=1665640236~hmac=b15ff9685fb47f5b4651002cf5bc02799db10b3d7ad1fac3b7ded0892497fa3e"/>
+                                            <div class="card-body">
+                                                <a class="btn btn-success btn-rounded" href="#" id="linkOrderDetails2" type="button">Order
+                                                    Details</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+            </main>
+            <!--end Dashboard-->
+        </section>
+    </div>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <section id="customerSection">
+        <!--Customer Headline-->
+        <div class="mb-5">
+            <h1 class="container-fluid"><span class="headline_part1">Manage</span> <span
+                    class="headline_part2">Customer</span></h1>
+        </div>
+
+        <!-- Start Customer Here-->
+        <section class="container-fluid mt-3 col-12" id="customerContent">
+            <!--Start customer data form -->
+            <section class="container-fluid mt-5">
+
+                <!-- First Row-->
+                <div class="row">
+                    <div class="mb-3 col">
+                        <label class="form-label" for="txtCustomerID">Customer ID</label>
+                        <input class="form-control customer_form" id="txtCustomerID" placeholder="C001" type="text">
+                        <span class="control-error" id="lblcusid"></span>
+                    </div>
+
+                    <div class="mb-3 col">
+                        <label class="form-label" for="txtCustomerName">Customer Name</label>
+                        <input class="form-control customer_form" id="txtCustomerName" placeholder="Ruvini Rangathara"
+                               type="text">
+                        <span class="control-error" id="lblcusname"></span>
+                    </div>
+                </div>
+
+                <!-- Second Row-->
+                <div class="row">
+
+                    <div class="mb-3 col">
+                        <label class="form-label" for="txtCustomerAddress">Customer Address</label>
+                        <input class="form-control customer_form" id="txtCustomerAddress"
+                               placeholder="Colombo" type="text">
+                        <span class="control-error" id="lblcusaddress"></span>
+                    </div>
+
+                    <div class="mb-3 col">
+                        <label class="form-label" for="txtCustomerSalary">Customer Salary</label>
+                        <input class="form-control customer_form" id="txtCustomerSalary" placeholder="90000"
+                               type="number">
+                        <span class="control-error" id="lblcussalary"></span>
+                    </div>
+                </div>
+            </section>
+            <!--End customer data form -->
+
+
+            <!-- Buttons Section -->
+            <section class="container-fluid mt-1 button mb-5 co-12">
+                <button class="btn btn-outline-primary" id="btnSaveCustomer" type="button">Save Customer</button>
+                <button class="btn btn-outline-info" id="btnClearCustomer" type="button">Clear</button>
+                <button class="btn btn-outline-warning" id="btnUpdateCustomer" type="button">Update</button>
+                <button class="btn btn-outline-danger" id="btnDeleteCustomer" type="button">Delete</button>
+            </section>
+
+            <!-- Search Bar -->
+            <section class="row mb-3">
+                <form class="d-flex col-5" role="search">
+                    <input aria-label="Search" class="form-control me-2 " id="customermyInput"
+                           placeholder="CustomerID/NIC/Name"
+                           type="search">
+                    <!--                <button class="btn btn-outline-success" type="submit">Search</button>-->
+                </form>
+            </section>
+
+
+            <!--  Customer Table -->
+            <section class="row ">
+
+                <div class="container-fluid col-12">
+                    <table class="table table-bordered table-hover">
+                        <thead class="bg-info text-white">
+                        <tr class="table-warning">
+                            <td class="col-3">Customer Id</td>
+                            <td class="col-3">Name</td>
+                            <td class="col-3">Address</td>
+                            <td class="col-3">Salary</td>
+                        </tr>
+                        </thead>
+
+                        <tbody id="tblCustomer">
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </section>
+        <!-- End Customer Here-->
+    </section>
+    <!----------------------------------------------------------------------------------------------------------------->
+
+
+    <section id="itemSection">
+        <!--Item Headline-->
+        <div class="mb-5">
+            <h1 class="container-fluid"><span class="headline_part1">Manage</span> <span
+                    class="headline_part2">Item</span></h1>
+        </div>
+
+        <!-- Start Item Here-->
+        <section class="container-fluid mt-3 mb-5" id="itemContent">
+            <!--Start Item data form -->
+            <section class="container-fluid mt-5">
+
+                <!-- First Row-->
+                <div class="row">
+                    <div class="mb-3 col">
+                        <label class="form-label" for="txtItemCode">Item Code</label>
+                        <input class="form-control item_form" id="txtItemCode" placeholder="I001" type="text">
+                        <span class="control-error" id="lblitemid"></span>
+                    </div>
+
+                    <div class="mb-3 col">
+                        <label class="form-label" for="txtItemName">Item Name</label>
+                        <input class="form-control item_form" id="txtItemName" placeholder="Noodle"
+                               type="text">
+                        <span class="control-error" id="lblitemname"></span>
+                    </div>
+                </div>
+
+                <!-- Second Row-->
+                <div class="row">
+
+                    <div class="mb-3 col">
+                        <label class="form-label" for="txtItemQTYOnHand">QTY On Hand</label>
+                        <input class="form-control item_form" id="txtItemQTYOnHand"
+                               placeholder="3" type="number">
+                        <span class="control-error" id="lblitemQtyOnHand"></span>
+                    </div>
+
+                    <div class="mb-3 col">
+                        <label class="form-label" for="txtItemPrice">Price</label>
+                        <input class="form-control item_form" id="txtItemPrice" placeholder="200" type="number">
+                        <span class="control-error" id="lblitemPrice"></span>
+                    </div>
+                </div>
+            </section>
+            <!--End Item data form -->
+
+
+            <!-- Buttons Section -->
+            <section class="container-fluid mt-1 button mb-5">
+                <button class="btn btn-outline-primary" id="btnSaveItem" type="button">Save Item</button>
+                <button class="btn btn-outline-info" id="btnClearItem" type="button">Clear</button>
+                <button class="btn btn-outline-warning" id="btnItemUpdate" type="button">Update</button>
+                <button class="btn btn-outline-danger" id="btnItemDelete" type="button">Delete</button>
+            </section>
+
+            <!-- Search Bar -->
+            <section class="row mb-3">
+                <form class="d-flex col-5" role="search">
+                    <input aria-label="Search" class="form-control me-2 " id="itemmyInput" placeholder="ItemCode/Name"
+                           type="search">
+                    <!--                <button class="btn btn-outline-success" type="submit">Search</button>-->
+                </form>
+
+            </section>
+
+
+            <!--  Item Table -->
+            <section class="row ">
+                <div class="container-fluid col-12">
+                    <table class="table table-bordered table-hover">
+                        <thead class="bg-info text-white">
+                        <tr class="table-success">
+                            <td class="col-3">Item Code</td>
+                            <td class="col-3">Name</td>
+                            <td class="col-3">Qty On Hand</td>
+                            <td class="col-3">Price</td>
+                        </tr>
+                        </thead>
+
+                        <tbody id="tblItem">
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </section>
+        <!-- End Item Here-->
+    </section>
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <section id="orderSection">
+        <!--Order Headline-->
+        <div class="mb-5">
+            <h1 class="container-fluid"><span class="headline_part1">Place</span> <span
+                    class="headline_part2">Order</span></h1>
+        </div>
+
+        <!--Start Invoice details, select item and total forms row-->
+        <section class="container-fluid row mb-5">
+
+            <!-- Start Invoice Details Form Section-->
+            <section class="mb-3 col-12 col-md-6 col-lg-4">
+
+                <!-- start form border -->
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body p-5">
+                        <h3 class="text-uppercase text-center mb-5">Invoice Details</h3>
+
+                        <!-- start Invoice form here -->
+                        <form id="Invoice Details">
+
+                            <!--Start 1st row -->
+                            <div class="row g-3 mb-4">
+                                <!--Start Order ID -->
+                                <div class="col">
+                                    Order ID:
+                                    <input aria-label="Order ID" class="form-control" id="txtOrderID" placeholder=""
+                                           type="text">
+                                </div>
+                                <!--End Order ID -->
+
+                                <!--Start Date -->
+                                <div class="col">
+                                    Date:
+                                    <input aria-label="Date" class="form-control" id="txtDate" placeholder=""
+                                           type="date">
+                                </div>
+                                <!--End Date -->
+                            </div>
+                            <!--End 1st row -->
+
+
+                            <!--Start 2nd row -->
+                            <div class="row g-3 mb-4">
+                                <!--Start choose customer id here -->
+                                <div class="col">
+                                    Customer ID:
+                                    <select class="form-select" id="inputCustomerID">
+                                    </select>
+                                </div>
+                                <!--End choose customer id here -->
+
+                                <!--Start Customer name -->
+                                <div class="col">
+                                    Customer Name:
+                                    <input aria-label="Customer Name" class="form-control" id="txtCusName"
+                                           placeholder=""
+                                           type="text">
+                                </div>
+                                <!--End Customer name -->
+                            </div>
+                            <!--End 2nd row -->
+
+                            <!--Start 3rd row -->
+                            <div class="row g-3">
+                                <!--Start Customer Address -->
+                                <div class="col">
+                                    Customer Address:
+                                    <input aria-label="Customer Address" class="form-control" id="txtCusAddress"
+                                           placeholder=""
+                                           type="text">
+                                </div>
+                                <!--End Customer Address -->
+
+                                <!--Start Customer Salary -->
+                                <div class="col">
+                                    Customer Salary:
+                                    <input aria-label="Customer Salary" class="form-control" id="txtCusSalary"
+                                           placeholder=""
+                                           type="number">
+                                </div>
+                                <!--ENd Customer Salary -->
+                            </div>
+                            <!--End 3rd row -->
+                        </form>
+                        <!-- end Invoice form here -->
+                    </div>
+                </div>
+                <!-- end form border -->
+
+            </section>
+            <!-- End Invoice Details Form Section-->
+
+
+            <!-- Start Item Select Form Section-->
+            <section class="mb-3 col-12 col-md-6 col-lg-4">
+
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body p-5">
+                        <h3 class="text-uppercase text-center mb-5">Select Item</h3>
+
+                        <!-- Start Item Select Form-->
+                        <form>
+
+                            <!-- Start 1st Row-->
+                            <div class="row g-3 mb-4">
+                                <!-- Start Item Code-->
+                                <div class="col">
+                                    Item ID:
+                                    <select class="form-select" id="inputItemID">
+                                    </select>
+                                </div>
+                                <!-- End Item Code-->
+
+                                <!-- Start Item Name-->
+                                <div class="col">
+                                    Item Name:
+                                    <input aria-label="Item Name" class="form-control" id="itemName" placeholder=""
+                                           type="text">
+                                </div>
+                                <!-- End Item Name-->
+                            </div>
+                            <!-- End 1st Row-->
+
+                            <!-- Start 2nd Row-->
+                            <div class="row g-3 mb-4">
+                                <!-- Start Item QTYOnHand-->
+                                <div class="col">
+                                    onHand:
+                                    <input aria-label="QTYOnHand" class="form-control" id="itemonHand" placeholder=""
+                                           type="number">
+                                </div>
+                                <!-- End Item QTYOnHand-->
+
+                                <!-- Start Item Price-->
+                                <div class="col">
+                                    Price:
+                                    <input aria-label="Price" class="form-control" id="itemPrice" placeholder=""
+                                           type="number">
+                                </div>
+                                <!-- End Item Price-->
+
+                                <!-- Start Order QTY-->
+                                <div class="col">
+                                    OrderQTY:
+                                    <input aria-label="Order QTY" class="form-control" id="itemorderQty" placeholder=""
+                                           type="number">
+                                </div>
+                            </div>
+                            <!-- End 2nd Row-->
+
+                            <!--Start Add to Cart Button and Clear button-->
+                            <div>
+                                <button class="btn btn-outline-primary" id="btnAddToCart" type="button">Add to Cart
+                                </button>
+
+                                <button class="btn btn-outline-warning" id="btnClear" type="button">Clear</button>
+                            </div>
+                            <!--End Add to Cart Button-->
+                        </form>
+                        <!-- End Item Select Form-->
+                    </div>
+                </div>
+            </section>
+            <!-- End Item Select Form Section-->
+
+
+            <!-- Start Total calculate Form-->
+            <section class="mb-3 col-12 col-md-6 col-lg-4">
+                <nav class="navbar bg-light mb-4">
+                    <div class="container-fluid">
+                        <span class="navbar-brand mb-0  ">Total:</span>
+                    </div>
+                    <div class="container-fluid">
+                        <span id="total">00.0</span>
+                    </div>
+                </nav>
+
+
+                <nav class="navbar bg-light mb-4">
+                    <div class="container-fluid">
+                        <span class="navbar-brand mb-0  ">Sub Total:</span>
+                    </div>
+                    <div class="container-fluid">
+                        <span id="subTotal">00.0</span>
+                    </div>
+                </nav>
+
+
+                <!-- Start cash and discount Row-->
+                <div class="row g-3 mb-4">
+                    <!-- Start Item Code-->
+                    <div class="col">
+                        <input aria-label="Cash" class="form-control" id="txtCash" placeholder="Cash" type="text">
+                    </div>
+                    <!-- End Item Code-->
+
+                    <!-- Start Item Name-->
+                    <div class="col">
+                        <input aria-label="Discount" class="form-control" id="txtDiscount" placeholder="Discount"
+                               type="number">
+                    </div>
+                    <!-- End Item Name-->
+                </div>
+                <!-- End cash and discount Row-->
+
+                <div class="col">
+                    <input aria-label="Balance" class="form-control mb-3" id="txtBalance" placeholder="Balance"
+                           type="number">
+                </div>
+
+                <button class="btn btn-outline-success" id="btnPlaceOrderButton" type="button">Place Order</button>
+
+            </section>
+            <!-- End Total calculate Form-->
+
+        </section>
+        <!--End Invoice details, select item and total forms row-->
+
+
+        <!-- Start Card Table -->
+        <section class="container-fluid">
+            <table class="table table-striped">
+                <thead class="bg-info text-white">
+                <tr class="table-info">
+                    <td>Order ID</td>
+                    <td>Item Code</td>
+                    <td>Item Name</td>
+                    <td>Price</td>
+                    <td>Qty</td>
+                    <td>Total</td>
+                </tr>
+
+                <tbody id="tblCart">
+
+
+                </tbody>
+            </table>
+        </section>
+        <!-- End Card Table -->
+    </section>
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <section id="orderDetailsSection">
+        <!--order details Headline-->
+        <div class="mb-5">
+            <h1 class="container-fluid"><span class="headline_part1">Order</span> <span
+                    class="headline_part2">Details</span></h1>
+        </div>
+
+        <!-- Search Bar -->
+        <section class="row mb-3 container-fluid">
+            <form class="d-flex col-5" role="search">
+                <input aria-label="Search" class="form-control me-2 " id="orderdetailsmyInput" placeholder="orderID"
+                       type="search">
+            </form>
+
+        </section>
+
+        <!--  order details Table -->
+        <section class="row container-fluid">
+            <div class="container-fluid col-12">
+                <table class="table table-hover table-bordered table-striped" id="orderDetailsTable_Main">
+                    <thead class="bg-success text-white">
+                    <tr class="">
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Customer Id</th>
+                        <th>Customer Name</th>
+                        <th>Item Code</th>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Discount</th>
+                        <th>Total</th>
+                    </tr>
+                    </thead>
+                    <tbody class="table-light" id="orderDetailTable">
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </section>
+    <!----------------------------------------------------------------------------------------------------------------->
+
+
+</main>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery-3.6.1.min.js"></script> <!--import jQuery js file-->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--import sweetalert js file-->
+
+<script src="controllers/PageLoadingController.js"></script>
+<script src="controllers/CustomerController.js"></script>
+<script src="controllers/ItemController.js"></script>
+<script src="controllers/OrderController.js"></script>
+<script src="controllers/OrderDetailController.js"></script>
+
+<script src="db/db.js"></script>
+
+<script src="model/Customer.js"></script>
+<script src="model/Item.js"></script>
+<script src="model/Cart.js"></script>
+<script src="model/Order.js"></script>
+<script src="model/OrderDetails.js"></script>
+
+
+</body>
+</html>

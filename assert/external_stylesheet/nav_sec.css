@@ -7,8 +7,8 @@
     background-color:#2a2727;!important;
     padding: 0;
     position: fixed;
-    width: 100%;
-    z-index: 1000;
+    width: 100vw;
+    z-index: 10000;
     height: fit-content;
     right: 0;
     top: 0;!important;
@@ -17,13 +17,13 @@
 
 #nav_my_name{
     font-size: 15px;
-    margin-bottom: 0;
     color: white;
-    margin-right: 80px;
+    width: fit-content;
+    margin-bottom: 0;
 }
 
 #hamburger_id{
-    border: 0px;
+    border: 0;
     width: 40px;
     height: 40px;
     padding: 0;
@@ -44,8 +44,9 @@
 
 .container-fluid{
     background-color: #2a2727;!important;
-    width: 100%;
+    width: 100vw;
     height: 50px;
+    padding: 0;!important;
 }
 
 .section_head{
@@ -55,7 +56,7 @@
     color: #FFA800;
     /*width: 200px;*/
     font-size: 45px;
-    opacity: 25%;
+    opacity: 35%;
     align-self:center;
     padding: 2vh 0vw 2vh 10vw;
     margin: 0;
@@ -92,20 +93,6 @@
 
 /*=========================================      Animation        ==============================================*/
 
-@import url("https://fonts.googleapis.com/css?family=Syncopate");
-
-
-/*html {*/
-/*    !* subtlepatterns.com *!*/
-/*    background: url("http://neilcarpenter.com/demos/asfalt.png") repeat;*/
-/*}*/
-/*body {*/
-/*    background: radial-gradient(*/
-/*            ellipse at center,*/
-/*            rgba(0, 0, 0, 0) 0%,*/
-/*            rgba(0, 0, 0, 0.44) 100%*/
-/*    );*/
-/*}*/
 #my_name {
     letter-spacing: 10px;
     display: table-cell;
@@ -115,7 +102,6 @@
     line-height: 2em;
 
     -webkit-font-smoothing: antialiased;
-    font-family: "Syncopate", Helvetica, Arial;
     text-transform: uppercase;
 
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
@@ -125,10 +111,6 @@ article {
     display: inline-block;
     font-style: normal;
     padding: 0 0.25em;
-    -webkit-transform: scale(0) translate3d(0, -2000px, 0);
-    -moz-transform: scale(0) translate3d(0, -2000px, 0);
-    -ms-transform: scale(0) translate3d(0, -2000px, 0);
-    -o-transform: scale(0) translate3d(0, -2000px, 0);
     transform: scale(0) translate3d(0, -2000px, 0);
     background: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
@@ -230,5 +212,18 @@ article.fly-in-out {
         background: rgba(255, 255, 255, 0.3);
         box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.2);
         border-radius: 50%;
+    }
+}
+
+@media all and (max-width: 375px){
+    #n {
+        width: 100vw;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .container-fluid {
+        width: 100vw;
+        margin-right: 0;
+        margin-left: 0;
     }
 }
