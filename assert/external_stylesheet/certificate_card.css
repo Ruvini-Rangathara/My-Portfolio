@@ -1,16 +1,3 @@
-@charset "UTF-8";
-* {
-    box-sizing: border-box;
-}
-
-/*body {*/
-/*    background: #eceef1;*/
-/*    font-family: "Slabo 27px", serif;*/
-/*    color: #333a45;*/
-/*}*/
-
-
-
 
 .card__expander{
     z-index: 2;
@@ -205,11 +192,7 @@
         margin-bottom: 40px;
     }
 }
-@media screen and (max-width: 767px) {
-    .card {
-        width: 100%;
-    }
-}
+
 
 @media screen and (min-width: 768px) and (max-width: 720px) {
     .card:nth-of-type(2n+2) .card__expander {

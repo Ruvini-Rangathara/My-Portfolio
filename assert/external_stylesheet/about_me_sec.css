@@ -1,4 +1,6 @@
 
+
+
 ::-webkit-scrollbar {
     width: 0;
     background-color: transparent;
@@ -205,5 +207,15 @@ a:visited {
 
     #my_position{
         padding-right: 20px;
+    }
+
+    #n{
+        left: 0;
+        margin-left: 0;
+    }
+
+    .container-fluid{
+        left: 0;
+        margin-left: 0;
     }
 }
